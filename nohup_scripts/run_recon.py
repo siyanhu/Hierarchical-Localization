@@ -57,13 +57,15 @@ def main():
     # --------------------------------------------------------------
     # Step 3: Path setup for images, output, and intermediate files
     # --------------------------------------------------------------
-    images_dir  = Path("/media/siyanhu/T71/hloc/datasets")
-    outputs_dir = Path("/media/siyanhu/T71/hloc/dji_recon")
+    images_dir  = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/mapping")
+    outputs_dir = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/hloc")
 
     sfm_pairs_path = outputs_dir / "pairs-netvlad.txt"
     loc_pairs_path = outputs_dir / "pairs-loc.txt"
 
     sfm_dir          = outputs_dir / "sfm"
+    sfm_dir.mkdir(parents=True, exist_ok=True)
+
     features_path    = outputs_dir / "features.h5"
     matches_path     = outputs_dir / "matches.h5"
     retrieval_path_h5 = outputs_dir / "features_retrieval.h5"
@@ -73,15 +75,16 @@ def main():
     #   ref_seqs = [7, 8, 9]
     #   We only pick images from those sequences to form the reference paths.
 
-    ref_seqs = [7, 8, 9]
     ref_paths = []
-    for seq_num in range(1, 10):
-        if seq_num in ref_seqs:
-            subfolder = images_dir / f"rgb{seq_num}"
-            for p in subfolder.iterdir():
-                if p.suffix.lower() == ".jpg":
-                    rel_path = str(p.relative_to(images_dir))
-                    ref_paths.append(rel_path)
+    if any(images_dir.iterdir()):
+        subdirs = [p for p in images_dir.iterdir() if p.is_dir()]
+        if subdirs:  # If subdirectories exist
+            for subdir in subdirs:
+                for img_path in subdir.glob('*.jpg'):  # Search for .jpg files in subdirectories
+                    ref_paths.append(str(img_path.relative_to(images_dir)))
+        else:  # If no subdirectories, look directly in the images folder
+            for img_path in images_dir.glob('*.jpg'):  # Search for .jpg files in images folder
+                ref_paths.append(str(img_path.relative_to(images_dir)))
 
     # Show an example slice
     print("Example subset of reference paths:", ref_paths[:10])
@@ -96,7 +99,7 @@ def main():
         image_list=ref_paths,
         feature_path=retrieval_path_h5
     )
-    pairs_from_retrieval.main(retrieval_path, sfm_pairs_path, num_matched=20)
+    pairs_from_retrieval.main(retrieval_path, sfm_pairs_path, num_matched=5)
     print(f"Retrieval features output: {retrieval_path}")
 
     # --------------------------------------------------------------
@@ -124,9 +127,9 @@ def main():
     # and it merges the matches, features, etc. into a COLMAP database
     # then runs the incremental pipeline. The complete process can take a while.
 
-    reconstruction.run_colmap(
-        images_dir,
+    reconstruction.main(
         sfm_dir,
+        images_dir,
         sfm_pairs_path,
         features_path,
         matches_path,
