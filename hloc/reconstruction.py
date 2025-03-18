@@ -99,8 +99,41 @@ def run_reconstruction(
     for filename in ["images.bin", "cameras.bin", "points3D.bin"]:
         if (sfm_dir / filename).exists():
             (sfm_dir / filename).unlink()
-        shutil.move(str(models_path / str(largest_index) / filename), str(sfm_dir))
+        # shutil.move(str(models_path / str(largest_index) / filename), str(sfm_dir))
     return reconstructions[largest_index]
+
+
+def main_with_existed_database(
+    sfm_dir: Path,
+    image_dir: Path,
+    pairs: Path,
+    features: Path,
+    matches: Path,
+    camera_mode: pycolmap.CameraMode = pycolmap.CameraMode.AUTO,
+    verbose: bool = False,
+    skip_geometric_verification: bool = False,
+    min_match_score: Optional[float] = None,
+    image_list: Optional[List[str]] = None,
+    image_options: Optional[Dict[str, Any]] = None,
+    mapper_options: Optional[Dict[str, Any]] = None,
+) -> pycolmap.Reconstruction:
+    assert features.exists(), features
+    assert pairs.exists(), pairs
+    assert matches.exists(), matches
+
+    sfm_dir.mkdir(parents=True, exist_ok=True)
+    database = sfm_dir / "database.db"
+
+    image_ids = get_image_ids(database)
+    reconstruction = run_reconstruction(
+        sfm_dir, database, image_dir, verbose, mapper_options
+    )
+    if reconstruction is not None:
+        logger.info(
+            f"Reconstruction statistics:\n{reconstruction.summary()}"
+            + f"\n\tnum_input_images = {len(image_ids)}"
+        )
+    return reconstruction
 
 
 def main(
