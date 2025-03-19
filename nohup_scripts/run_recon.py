@@ -45,6 +45,8 @@ def main():
     # --------------------------------------------------------------
     # Step 2: Retrieval, feature, and matcher configurations
     # --------------------------------------------------------------
+
+    number_of_match = 20
     retrieval_conf = extract_features.confs['netvlad'].copy()
     feature_conf   = extract_features.confs['superpoint_aachen'].copy()
     matcher_conf   = match_features.confs['superpoint+lightglue'].copy()
@@ -57,8 +59,8 @@ def main():
     # --------------------------------------------------------------
     # Step 3: Path setup for images, output, and intermediate files
     # --------------------------------------------------------------
-    images_dir  = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/mapping")
-    outputs_dir = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/hloc")
+    images_dir  = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/20250124_gopro/frames")
+    outputs_dir = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/20250124_gopro/hloc")
 
     sfm_pairs_path = outputs_dir / "pairs-netvlad.txt"
     loc_pairs_path = outputs_dir / "pairs-loc.txt"
@@ -71,19 +73,16 @@ def main():
     retrieval_path_h5 = outputs_dir / "features_retrieval.h5"
 
     # List of image subfolders or sequences
-    # Example:
-    #   ref_seqs = [7, 8, 9]
-    #   We only pick images from those sequences to form the reference paths.
 
     ref_paths = []
     if any(images_dir.iterdir()):
         subdirs = [p for p in images_dir.iterdir() if p.is_dir()]
         if subdirs:  # If subdirectories exist
             for subdir in subdirs:
-                for img_path in subdir.glob('*.jpg'):  # Search for .jpg files in subdirectories
+                for img_path in subdir.glob('*.png'):  # Search for .jpg files in subdirectories
                     ref_paths.append(str(img_path.relative_to(images_dir)))
         else:  # If no subdirectories, look directly in the images folder
-            for img_path in images_dir.glob('*.jpg'):  # Search for .jpg files in images folder
+            for img_path in images_dir.glob('*.png'):  # Search for .jpg files in images folder
                 ref_paths.append(str(img_path.relative_to(images_dir)))
 
     # Show an example slice
@@ -99,7 +98,7 @@ def main():
         image_list=ref_paths,
         feature_path=retrieval_path_h5
     )
-    pairs_from_retrieval.main(retrieval_path, sfm_pairs_path, num_matched=5)
+    pairs_from_retrieval.main(retrieval_path, sfm_pairs_path, num_matched=number_of_match)
     print(f"Retrieval features output: {retrieval_path}")
 
     # --------------------------------------------------------------

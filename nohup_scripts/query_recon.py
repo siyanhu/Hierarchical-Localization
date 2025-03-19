@@ -79,6 +79,7 @@ def query_position(
     count = 0
     time_total = 0.0
     output_file_path = f"{outputs.resolve()}_{model_index}_query_results.json"
+    number_of_match = 10
 
     with open(output_file_path, "w") as json_file:
         json_file.write("[\n")  # begin JSON array
@@ -102,7 +103,7 @@ def query_position(
             pairs_from_retrieval.main(
                 outputs / "features_retrieval.h5", 
                 outputs / "pairs-loc.txt", 
-                num_matched=20, 
+                num_matched=number_of_match, 
                 db_list=references_registered, 
                 query_list=[query]
             )
@@ -170,12 +171,15 @@ def main():
     Main entry point for reference reconstruction and query localization.
     """
     # Adjust paths according to your setup
-    images = Path("/media/siyanhu/T71/hloc/datasets_ref/")
-    outputs = Path("/media/siyanhu/T71/hloc/ref_recon")
-    sfm_dir = outputs / "sfm"
+    images = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/mapping")
+    queries_dir  = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/mapping")
+    outputs_ref = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/hloc")
+    outputs_query = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/query")
+    outputs_query.mkdir(parents=True, exist_ok=True)
+    sfm_dir = outputs_ref / "sfm"
 
     # Number of pre-computed sub-models in sfm_dir/models/
-    total_model_num = 5
+    total_model_num = 1
     models = []
     ref_registers = {}
 
@@ -194,19 +198,22 @@ def main():
 
     # Suppose you have some query list already determined (e.g., 'rgb7', 'rgb8', 'rgb9' images)
     # In a real setup, you'd collect these from your dataset or command-line arguments
-    dummy_query_list = [
-        "rgb7/00110.jpg",
-        "rgb7/00111.jpg",
-        "rgb7/00112.jpg",
-        # ...
-        # Add more as needed
-    ]
+    query_paths = []
+    if any(queries_dir.iterdir()):
+        subdirs = [p for p in queries_dir.iterdir() if p.is_dir()]
+        if subdirs:  # If subdirectories exist
+            for subdir in subdirs:
+                for img_path in subdir.glob('*.jpg'):  # Search for .jpg files in subdirectories
+                    query_paths.append(str(img_path.relative_to(queries_dir)))
+        else:  # If no subdirectories, look directly in the images folder
+            for img_path in queries_dir.glob('*.jpg'):  # Search for .jpg files in images folder
+                query_paths.append(str(img_path.relative_to(queries_dir)))
 
     # Localize the queries against each sub-model
     for idx, one_model in enumerate(models):
         references = ref_registers[idx]
         query_position(
-            dummy_query_list,
+            query_paths,
             one_model,
             references,
             idx,
@@ -214,7 +221,7 @@ def main():
             retrieval_conf,
             matcher_conf,
             images,
-            outputs
+            outputs_query
         )
 
 if __name__ == "__main__":
