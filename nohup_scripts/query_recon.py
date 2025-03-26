@@ -7,8 +7,7 @@ import json
 from pathlib import Path
 import pycolmap
 import torch
-import torchvision.transforms as transforms
-import numpy as np
+from tqdm import tqdm
 from hloc import extract_features, match_features, reconstruction, pairs_from_retrieval
 from hloc.localize_sfm import QueryLocalizer, pose_from_cluster
 
@@ -36,15 +35,13 @@ feature_conf["device"] = "cuda"    # Force GPU for SuperPoint
 matcher_conf = match_features.confs["superpoint+lightglue"]
 matcher_conf["device"] = "cuda"    # Force GPU for LightGlue
 
-def filter_query_images(ref_register_list):
-    """
-    Filters out images from 'rgb7', 'rgb8', 'rgb9' for references to avoid query overlap.
-    """
-    skip_list = ['rgb7', 'rgb8', 'rgb9']
+def filter_query_images(ref_register_list, skip_seq_list=None):
+    if skip_seq_list is None:
+        return ref_register_list
     filtered = []
     for name in ref_register_list:
-        prefix = name.split('/')[0]
-        if prefix not in skip_list:
+        prefix = name.split(os.sep)[0]
+        if prefix not in skip_seq_list:
             filtered.append(name)
     return filtered
 
@@ -63,8 +60,11 @@ def parse_retrieval(path):
     return retrieval
 
 def query_position(
-    query_list, model, references_registered, model_index, 
-    feature_conf, retrieval_conf, matcher_conf, images, outputs
+        sfm_model, model_index,
+        query_list, query_dir, outputs_query,
+        references_registered, ref_dir, outputs_ref,
+        feature_conf, retrieval_conf, matcher_conf,
+        number_of_matches = 20
 ):
     """
     Localizes a list of queries against a given model by:
@@ -76,128 +76,129 @@ def query_position(
     
     Writes results in a JSON file.
     """
+    features = outputs_query / 'features.h5'
+    matches = outputs_query / 'matches.h5'
+    retrieval_features = outputs_query/'features_retrieval.h5'
+    loc_pairs = outputs_query / 'pairs-loc.txt'
+
+    db_features = outputs_ref / 'features.h5'
+    db_retrieval_features = outputs_ref / 'features_retrieval.h5'
+
     count = 0
     time_total = 0.0
-    output_file_path = f"{outputs.resolve()}_{model_index}_query_results.json"
-    number_of_match = 10
+    output_file_path = outputs_query / "query_results.json"
+
+    conf = {
+                'estimation': {'ransac': {'max_error': 12}},
+                'refinement': {'refine_focal_length': True, 'refine_extra_params': True},
+            }
+    localizer = QueryLocalizer(sfm_model, conf)
 
     with open(output_file_path, "w") as json_file:
         json_file.write("[\n")  # begin JSON array
-        for query in query_list:
+        for query in tqdm(query_list, desc="Processing queries"):
             count += 1
             print(f"progress: {count / len(query_list)} | query: {query}")
             time_start = time.time()
-
-            # Local and global feature extraction for the query
-            extract_features.main(
-                feature_conf, images, image_list=[query], 
-                feature_path=outputs / "features.h5", 
-                overwrite=True
-            )
-            extract_features.main(
-                retrieval_conf, images, image_list=[query], 
-                feature_path=outputs / "features_retrieval.h5"
-            )
-
-            # Retrieve top-K references for the query and store in pairs-loc.txt
-            pairs_from_retrieval.main(
-                outputs / "features_retrieval.h5", 
-                outputs / "pairs-loc.txt", 
-                num_matched=number_of_match, 
+            extract_features.main(feature_conf, query_dir, image_list=[query], feature_path=features, overwrite=True, query_mode=True)
+            global_descriptors = extract_features.main(retrieval_conf, query_dir, image_list=[query], feature_path=retrieval_features, query_mode=True)
+            pairs_from_retrieval.query_main(
+                descriptors=global_descriptors,
+                db_descriptors=db_retrieval_features,
+                output=loc_pairs, 
+                num_matched=number_of_matches, 
                 db_list=references_registered, 
                 query_list=[query]
             )
-
-            # Match local features
             match_features.main(
-                matcher_conf, 
-                outputs / "pairs-loc.txt", 
-                features=outputs / "features.h5", 
-                matches=outputs / "matches.h5", 
+                conf=matcher_conf, 
+                pairs=loc_pairs, 
+                features=features, 
+                matches=matches, 
+                features_ref=db_features,
                 overwrite=True
             )
 
-            # Parse netvlad retrieval results
-            retrieval_images = parse_retrieval(outputs / "pairs-loc.txt")
-            camera = pycolmap.infer_camera_from_image(images / query)
-
-            # Gather 3D references from retrieval output
+            camera = pycolmap.infer_camera_from_image(query_dir / query)
+            retrieval_images = parse_retrieval(loc_pairs)
             ref_ids = []
             for n in references_registered:
                 if n in retrieval_images:
-                    img_id = model.find_image_with_name(n).image_id
-                    ref_ids.append(img_id)
-
-            conf = {
-                "estimation": {"ransac": {"max_error": 12}},
-                "refinement": {
-                    "refine_focal_length": True, 
-                    "refine_extra_params": True
-                },
-            }
-            localizer = QueryLocalizer(model, conf)
+                    ref_ids.append(sfm_model.find_image_with_name(n).image_id)
 
             try:
-                # Attempt to localize the query
-                ret, log = pose_from_cluster(
-                    localizer, query, camera, ref_ids, 
-                    outputs / "features.h5", outputs / "matches.h5"
-                )
+                ret, log = pose_from_cluster(localizer, query, camera, ref_ids, features, matches)
                 time_end = time.time()
                 inference_time = time_end - time_start
                 time_total += inference_time
-
+                
+                # Create the result dictionary
                 result = {
                     "query": query,
-                    "rotation": ret["cam_from_world"].rotation.quat.tolist(),
-                    "translation": ret["cam_from_world"].translation.tolist(),
+                    "rotation": ret['cam_from_world'].rotation.quat.tolist(),
+                    "translation": ret['cam_from_world'].translation.tolist(),
                     "inference_time": inference_time
                 }
+                
+                # Write the result to the file
                 json.dump(result, json_file)
+                
+                # Add a comma if this is not the last query
                 if count < len(query_list):
-                    json_file.write(",\n")
+                    json_file.write(',\n')
                 else:
-                    json_file.write("\n")
+                    json_file.write('\n')  # Final entry, no comma
             except Exception as e:
-                print("="*60)
-                print(f"Error localizing {query} with model {model_index}: {e}")
-                print("="*60)
-        json_file.write("]\n")  # end JSON array
+                print("============================================")
+                print(e)
+                print("============================================")
+                pass
+        json_file.write(']\n')  # End the JSON array
+    print('avg inference time: ', time_total / len(query_list))
 
-    print(f"avg inference time: {time_total / len(query_list):.4f} seconds")
-
+            
 def main():
     """
     Main entry point for reference reconstruction and query localization.
     """
     # Adjust paths according to your setup
-    images = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/mapping")
-    queries_dir  = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/mapping")
-    outputs_ref = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/hloc")
-    outputs_query = Path("/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/query")
+    ref_dir = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/frames")
+    queries_dir  = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/frames/2024")
+    skip_query_seq_from_ref = ["2024"]
+
+    outputs_ref = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/hloc")
+    outputs_query = outputs_ref / "queries_2024"
     outputs_query.mkdir(parents=True, exist_ok=True)
     sfm_dir = outputs_ref / "sfm"
 
     # Number of pre-computed sub-models in sfm_dir/models/
-    total_model_num = 1
+    total_model_num = 100
     models = []
     ref_registers = {}
 
-    # Gather the colmap reconstructions and filter out queries from references
     for model_index in range(total_model_num):
         # Each sub-reconstruction is stored in: sfm_dir/models/<model_index>
         model_path = sfm_dir / "models" / str(model_index)
+        if not model_path.exists():
+            break
         model = pycolmap.Reconstruction(model_path)
-
-        # ID of images that are already registered
         references_registered_init = [model.images[i].name for i in model.reg_image_ids()]
-        references_registered = filter_query_images(references_registered_init)
-
+        references_registered = filter_query_images(references_registered_init, skip_seq_list=skip_query_seq_from_ref)
         models.append(model)
         ref_registers[model_index] = references_registered
 
     # Suppose you have some query list already determined (e.g., 'rgb7', 'rgb8', 'rgb9' images)
-    # In a real setup, you'd collect these from your dataset or command-line arguments
+    ref_paths = []
+    if any(ref_dir.iterdir()):
+        subdirs = [p for p in ref_dir.iterdir() if p.is_dir()]
+        if subdirs:  # If subdirectories exist
+            for subdir in subdirs:
+                for img_path in subdir.glob('*.jpg'):  # Search for .jpg files in subdirectories
+                    ref_paths.append(str(img_path.relative_to(ref_dir)))
+        else:  # If no subdirectories, look directly in the images folder
+            for img_path in ref_dir.glob('*.jpg'):  # Search for .jpg files in images folder
+                ref_paths.append(str(img_path.relative_to(ref_dir)))
+
     query_paths = []
     if any(queries_dir.iterdir()):
         subdirs = [p for p in queries_dir.iterdir() if p.is_dir()]
@@ -209,19 +210,17 @@ def main():
             for img_path in queries_dir.glob('*.jpg'):  # Search for .jpg files in images folder
                 query_paths.append(str(img_path.relative_to(queries_dir)))
 
+    print(ref_paths[5:10], ref_paths[-10:-5])
+    print(query_paths[5:10], query_paths[-10:-5])
+
     # Localize the queries against each sub-model
     for idx, one_model in enumerate(models):
         references = ref_registers[idx]
         query_position(
-            query_paths,
-            one_model,
-            references,
-            idx,
-            feature_conf,
-            retrieval_conf,
-            matcher_conf,
-            images,
-            outputs_query
+            one_model, idx,
+            query_paths, queries_dir, outputs_query,
+            references, ref_dir, outputs_ref,
+            feature_conf, retrieval_conf, matcher_conf
         )
 
 if __name__ == "__main__":

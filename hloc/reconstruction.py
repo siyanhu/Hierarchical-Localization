@@ -106,9 +106,6 @@ def run_reconstruction(
 def main_with_existed_database(
     sfm_dir: Path,
     image_dir: Path,
-    pairs: Path,
-    features: Path,
-    matches: Path,
     camera_mode: pycolmap.CameraMode = pycolmap.CameraMode.AUTO,
     verbose: bool = False,
     skip_geometric_verification: bool = False,
@@ -117,9 +114,6 @@ def main_with_existed_database(
     image_options: Optional[Dict[str, Any]] = None,
     mapper_options: Optional[Dict[str, Any]] = None,
 ) -> pycolmap.Reconstruction:
-    assert features.exists(), features
-    assert pairs.exists(), pairs
-    assert matches.exists(), matches
 
     sfm_dir.mkdir(parents=True, exist_ok=True)
     database = sfm_dir / "database.db"

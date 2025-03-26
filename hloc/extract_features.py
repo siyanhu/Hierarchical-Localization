@@ -238,10 +238,12 @@ def main(
     image_list: Optional[Union[Path, List[str]]] = None,
     feature_path: Optional[Path] = None,
     overwrite: bool = False,
+    query_mode=False
 ) -> Path:
-    logger.info(
-        "Extracting local features with configuration:" f"\n{pprint.pformat(conf)}"
-    )
+    if not query_mode:
+        logger.info(
+            "Extracting local features with configuration:" f"\n{pprint.pformat(conf)} \n {image_dir}\{image_list}"
+        )
 
     dataset = ImageDataset(image_dir, conf["preprocessing"], image_list)
     if feature_path is None:

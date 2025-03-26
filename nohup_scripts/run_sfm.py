@@ -59,80 +59,36 @@ def main():
     # --------------------------------------------------------------
     # Step 3: Path setup for images, output, and intermediate files
     # --------------------------------------------------------------
-    images_dir  = Path("/media/siyanhu/Changkun/Siyan/Tramway/data_2025_01_24-lidarrgb/rgb3")
-    outputs_dir = Path("/media/siyanhu/Changkun/Siyan/Tramway/data_2025_01_24-lidarrgb/hloc_rgb3")
+    images_dir  = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb5/frames_2025")
+    outputs_dir = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb5/hloc_2025")
     outputs_dir.mkdir(parents=True, exist_ok=True)
-
-    sfm_pairs_path = outputs_dir / "pairs-netvlad.txt"
-    loc_pairs_path = outputs_dir / "pairs-loc.txt"
 
     sfm_dir          = outputs_dir / "sfm"
     sfm_dir.mkdir(parents=True, exist_ok=True)
 
-    features_path    = outputs_dir / "features.h5"
-    matches_path     = outputs_dir / "matches.h5"
-    retrieval_path_h5 = outputs_dir / "features_retrieval.h5"
-
-    # List of image subfolders or sequences
+    # # List of image subfolders or sequences
 
     ref_paths = []
     if any(images_dir.iterdir()):
         subdirs = [p for p in images_dir.iterdir() if p.is_dir()]
         if subdirs:  # If subdirectories exist
             for subdir in subdirs:
+                if ('2024' in str(subdir)):
+                    continue
                 for img_path in subdir.glob('*.jpg'):  # Search for .jpg files in subdirectories
                     ref_paths.append(str(img_path.relative_to(images_dir)))
         else:  # If no subdirectories, look directly in the images folder
             for img_path in images_dir.glob('*.jpg'):  # Search for .jpg files in images folder
+                if ('2024' in str(images_dir)):
+                    continue
                 ref_paths.append(str(img_path.relative_to(images_dir)))
 
     # Show an example slice
     print("Example subset of reference paths:", ref_paths[:10])
 
-    # --------------------------------------------------------------
-    # Step 4: Global feature extraction + image pairs from retrieval
-    # --------------------------------------------------------------
-    print("\n[Step 4] Global retrieval feature extraction + pairs_from_retrieval")
-    retrieval_path = extract_features.main(
-        retrieval_conf,
-        images_dir,
-        image_list=ref_paths,
-        feature_path=retrieval_path_h5
-    )
-    pairs_from_retrieval.main(retrieval_path, sfm_pairs_path, num_matched=number_of_match)
-    print(f"Retrieval features output: {retrieval_path}")
-
-    # --------------------------------------------------------------
-    # Step 5: Local feature extraction & matching
-    # --------------------------------------------------------------
-    print("\n[Step 5] Local feature extraction & matcher")
-    extract_features.main(
-        feature_conf,
-        images_dir,
-        image_list=ref_paths,
-        feature_path=features_path
-    )
-    match_features.main(
-        matcher_conf,
-        sfm_pairs_path,
-        features=features_path,
-        matches=matches_path
-    )
-
-    # --------------------------------------------------------------
-    # Step 6: 3D reconstruction with COLMAP
-    # --------------------------------------------------------------
-    print("\n[Step 6] 3D reconstruction using COLMAP (via hloc.reconstruction.run_colmap)")
-    # This step uses the hloc reconstruction module
-    # and it merges the matches, features, etc. into a COLMAP database
-    # then runs the incremental pipeline. The complete process can take a while.
-
-    reconstruction.main(
+    reconstruction.main_with_existed_database(
         sfm_dir,
         images_dir,
-        sfm_pairs_path,
-        features_path,
-        matches_path,
         skip_geometric_verification=False,  # set True if you already did it
         image_list=ref_paths
     )
