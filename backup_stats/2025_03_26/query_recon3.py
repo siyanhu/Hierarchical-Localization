@@ -162,10 +162,10 @@ def main():
     Main entry point for reference reconstruction and query localization.
     """
     # Adjust paths according to your setup
-    ref_dir = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/frames")
-    queries_dir  = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/frames/2024")
+    ref_dir = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb5/frames/2025")
+    queries_dir  = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb5/frames/2024")
     skip_query_seq_from_ref = ["2024"]
-    outputs_ref = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/hloc")
+    outputs_ref = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/hloc_rgb5_independent_2025")
     
     outputs_query = outputs_ref / "queries_2024"
     outputs_query.mkdir(parents=True, exist_ok=True)
