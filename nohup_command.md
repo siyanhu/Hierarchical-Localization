@@ -9,3 +9,6 @@ ps aux | grep nohup
 cp -r /media/siyanhu/T7/HKUST/scene_corridor/GX010041_42/images/* /media/siyanhu/T7/HKUST/scene_corridor/hloc_gopro/datasets/
 
 ps aux | grep nohup_recon.sh | grep -v grep
+
+
+nohup python nohup_scripts/run_sfm.py > run_sfm_rbg5.log 2>&1 &

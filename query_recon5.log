@@ -1,0 +1,2613 @@
+nohup: ignoring input
+['2025/00006.jpg', '2025/00007.jpg', '2025/00008.jpg', '2025/00009.jpg', '2025/00010.jpg'] ['2025/00746.jpg', '2025/00747.jpg', '2025/00748.jpg', '2025/00749.jpg', '2025/00750.jpg']
+['1740062703.126900220.jpg', '1740062703.330127699.jpg', '1740062703.527535566.jpg', '1740062703.724746046.jpg', '1740062703.928726727.jpg'] ['1740062700.128292043.jpg', '1740062700.331159341.jpg', '1740062700.533874817.jpg', '1740062700.724306370.jpg', '1740062700.925590502.jpg']
+Processing queries:   0%|          | 0/891 [00:00<?, ?it/s]/home/siyanhu/Gits/Tramway/Hierarchical-Localization/hloc/extractors/../../third_party/SuperGluePretrainedNetwork/models/superpoint.py:137: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(str(path)))
+progress: 0.001122334455667789 | query: 1740062702.119028550.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  3.40it/s][A100%|██████████| 1/1 [00:00<00:00,  3.26it/s]
+[2025/03/26 22:26:38 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.37it/s][A100%|██████████| 1/1 [00:00<00:00,  6.33it/s]
+[2025/03/26 22:26:43 hloc INFO] Finished exporting features.
+[2025/03/26 22:26:43 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:26:44 hloc INFO] Found 20 pairs.
+[2025/03/26 22:26:44 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+/home/siyanhu/miniconda3/envs/py311hloc/lib/python3.11/site-packages/lightglue/lightglue.py:24: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @torch.cuda.amp.custom_fwd(cast_inputs=torch.float32)
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:15,  1.24it/s][A
+ 45%|████▌     | 9/20 [00:00<00:01, 10.61it/s][A
+ 65%|██████▌   | 13/20 [00:01<00:00, 11.93it/s][A
+ 85%|████████▌ | 17/20 [00:01<00:00, 14.01it/s][A
+100%|██████████| 20/20 [00:01<00:00, 13.96it/s][A100%|██████████| 20/20 [00:01<00:00, 12.77it/s]
+[2025/03/26 22:26:46 hloc INFO] Finished exporting matches.
+Processing queries:   0%|          | 1/891 [00:08<2:06:25,  8.52s/it]/home/siyanhu/Gits/Tramway/Hierarchical-Localization/hloc/extractors/../../third_party/SuperGluePretrainedNetwork/models/superpoint.py:137: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(str(path)))
+progress: 0.002244668911335578 | query: 1740062702.324384681.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.24it/s]
+[2025/03/26 22:26:46 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.60it/s][A100%|██████████| 1/1 [00:00<00:00,  6.36it/s]
+[2025/03/26 22:26:51 hloc INFO] Finished exporting features.
+[2025/03/26 22:26:51 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:26:51 hloc INFO] Found 20 pairs.
+[2025/03/26 22:26:51 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:06,  2.85it/s][A
+ 25%|██▌       | 5/20 [00:00<00:01, 11.52it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 25.08it/s][A100%|██████████| 20/20 [00:00<00:00, 28.89it/s]
+[2025/03/26 22:26:52 hloc INFO] Finished exporting matches.
+Processing queries:   0%|          | 2/891 [00:14<1:45:50,  7.14s/it]progress: 0.003367003367003367 | query: 1740062702.526607611.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.43it/s]
+[2025/03/26 22:26:52 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.05it/s][A100%|██████████| 1/1 [00:00<00:00,  5.84it/s]
+[2025/03/26 22:26:57 hloc INFO] Finished exporting features.
+[2025/03/26 22:26:57 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:26:57 hloc INFO] Found 20 pairs.
+[2025/03/26 22:26:57 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.69it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 26.42it/s][A
+ 85%|████████▌ | 17/20 [00:00<00:00, 42.39it/s][A100%|██████████| 20/20 [00:00<00:00, 40.48it/s]
+[2025/03/26 22:26:58 hloc INFO] Finished exporting matches.
+Processing queries:   0%|          | 3/891 [00:20<1:37:53,  6.61s/it]progress: 0.004489337822671156 | query: 1740062702.721062392.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.12it/s]
+[2025/03/26 22:26:58 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.50it/s][A100%|██████████| 1/1 [00:00<00:00,  6.19it/s]
+[2025/03/26 22:27:03 hloc INFO] Finished exporting features.
+[2025/03/26 22:27:03 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:27:03 hloc INFO] Found 20 pairs.
+[2025/03/26 22:27:03 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:05,  3.65it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 16.58it/s][A
+ 75%|███████▌  | 15/20 [00:00<00:00, 33.66it/s][A100%|██████████| 20/20 [00:00<00:00, 33.64it/s]
+[2025/03/26 22:27:04 hloc INFO] Finished exporting matches.
+Processing queries:   0%|          | 4/891 [00:26<1:34:38,  6.40s/it]progress: 0.005611672278338945 | query: 1740062702.918645244.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.46it/s]
+[2025/03/26 22:27:04 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.39it/s][A100%|██████████| 1/1 [00:00<00:00,  6.00it/s]
+[2025/03/26 22:27:09 hloc INFO] Finished exporting features.
+[2025/03/26 22:27:09 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:27:10 hloc INFO] Found 20 pairs.
+[2025/03/26 22:27:10 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  5.13it/s][A
+ 20%|██        | 4/20 [00:00<00:01, 13.91it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 31.62it/s][A100%|██████████| 20/20 [00:00<00:00, 38.02it/s]
+[2025/03/26 22:27:10 hloc INFO] Finished exporting matches.
+Processing queries:   1%|          | 5/891 [00:32<1:32:29,  6.26s/it]progress: 0.006734006734006734 | query: 1740062703.126900220.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.79it/s]
+[2025/03/26 22:27:10 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.15it/s][A100%|██████████| 1/1 [00:00<00:00,  5.94it/s]
+[2025/03/26 22:27:15 hloc INFO] Finished exporting features.
+[2025/03/26 22:27:15 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:27:16 hloc INFO] Found 20 pairs.
+[2025/03/26 22:27:16 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  5.05it/s][A
+ 25%|██▌       | 5/20 [00:00<00:00, 17.13it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 33.66it/s][A100%|██████████| 20/20 [00:00<00:00, 37.58it/s]
+[2025/03/26 22:27:16 hloc INFO] Finished exporting matches.
+Processing queries:   1%|          | 6/891 [00:38<1:31:09,  6.18s/it]progress: 0.007856341189674524 | query: 1740062703.330127699.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.15it/s]
+[2025/03/26 22:27:16 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.05it/s][A100%|██████████| 1/1 [00:00<00:00,  5.82it/s]
+[2025/03/26 22:27:21 hloc INFO] Finished exporting features.
+[2025/03/26 22:27:21 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:27:22 hloc INFO] Found 20 pairs.
+[2025/03/26 22:27:22 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.35it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 28.22it/s][A
+ 80%|████████  | 16/20 [00:00<00:00, 39.03it/s][A100%|██████████| 20/20 [00:00<00:00, 34.15it/s]
+[2025/03/26 22:27:22 hloc INFO] Finished exporting matches.
+Processing queries:   1%|          | 7/891 [00:44<1:30:40,  6.15s/it]progress: 0.008978675645342313 | query: 1740062703.527535566.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.62it/s]
+[2025/03/26 22:27:23 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.61it/s][A100%|██████████| 1/1 [00:00<00:00,  6.32it/s]
+[2025/03/26 22:27:27 hloc INFO] Finished exporting features.
+[2025/03/26 22:27:27 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:27:28 hloc INFO] Found 20 pairs.
+[2025/03/26 22:27:28 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.52it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 26.29it/s][A
+ 75%|███████▌  | 15/20 [00:00<00:00, 37.63it/s][A100%|██████████| 20/20 [00:00<00:00, 39.11it/s]
+[2025/03/26 22:27:28 hloc INFO] Finished exporting matches.
+Processing queries:   1%|          | 8/891 [00:50<1:29:50,  6.10s/it]progress: 0.010101010101010102 | query: 1740062703.724746046.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.46it/s]
+[2025/03/26 22:27:29 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.08it/s][A100%|██████████| 1/1 [00:00<00:00,  6.58it/s]
+[2025/03/26 22:27:33 hloc INFO] Finished exporting features.
+[2025/03/26 22:27:33 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:27:34 hloc INFO] Found 20 pairs.
+[2025/03/26 22:27:34 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.88it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 30.10it/s][A
+ 85%|████████▌ | 17/20 [00:00<00:00, 43.56it/s][A100%|██████████| 20/20 [00:00<00:00, 41.73it/s]
+[2025/03/26 22:27:34 hloc INFO] Finished exporting matches.
+Processing queries:   1%|          | 9/891 [00:56<1:29:07,  6.06s/it]progress: 0.01122334455667789 | query: 1740062703.928726727.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.45it/s]
+[2025/03/26 22:27:34 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.03it/s][A100%|██████████| 1/1 [00:00<00:00,  6.71it/s]
+[2025/03/26 22:27:39 hloc INFO] Finished exporting features.
+[2025/03/26 22:27:39 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:27:40 hloc INFO] Found 20 pairs.
+[2025/03/26 22:27:40 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.52it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 28.61it/s][A
+ 90%|█████████ | 18/20 [00:00<00:00, 44.31it/s][A100%|██████████| 20/20 [00:00<00:00, 41.14it/s]
+[2025/03/26 22:27:40 hloc INFO] Finished exporting matches.
+Processing queries:   1%|          | 10/891 [01:02<1:28:31,  6.03s/it]progress: 0.012345679012345678 | query: 1740062704.129746076.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.84it/s]
+[2025/03/26 22:27:40 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.89it/s][A100%|██████████| 1/1 [00:00<00:00,  6.58it/s]
+[2025/03/26 22:27:45 hloc INFO] Finished exporting features.
+[2025/03/26 22:27:45 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:27:46 hloc INFO] Found 20 pairs.
+[2025/03/26 22:27:46 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.24it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 27.63it/s][A
+ 85%|████████▌ | 17/20 [00:00<00:00, 38.66it/s][A100%|██████████| 20/20 [00:00<00:00, 37.55it/s]
+[2025/03/26 22:27:46 hloc INFO] Finished exporting matches.
+Processing queries:   1%|          | 11/891 [01:08<1:28:22,  6.03s/it]progress: 0.013468013468013467 | query: 1740062704.331017153.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.98it/s]
+[2025/03/26 22:27:46 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.19it/s][A100%|██████████| 1/1 [00:00<00:00,  6.83it/s]
+[2025/03/26 22:27:51 hloc INFO] Finished exporting features.
+[2025/03/26 22:27:51 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:27:52 hloc INFO] Found 20 pairs.
+[2025/03/26 22:27:52 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.53it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 29.35it/s][A
+ 90%|█████████ | 18/20 [00:00<00:00, 44.61it/s][A100%|██████████| 20/20 [00:00<00:00, 41.34it/s]
+[2025/03/26 22:27:52 hloc INFO] Finished exporting matches.
+Processing queries:   1%|▏         | 12/891 [01:14<1:27:58,  6.01s/it]progress: 0.014590347923681257 | query: 1740062704.530901340.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.67it/s]
+[2025/03/26 22:27:52 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.14it/s][A100%|██████████| 1/1 [00:00<00:00,  5.92it/s]
+[2025/03/26 22:27:57 hloc INFO] Finished exporting features.
+[2025/03/26 22:27:57 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:27:58 hloc INFO] Found 20 pairs.
+[2025/03/26 22:27:58 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.51it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 28.64it/s][A
+ 90%|█████████ | 18/20 [00:00<00:00, 43.66it/s][A100%|██████████| 20/20 [00:00<00:00, 40.79it/s]
+[2025/03/26 22:27:58 hloc INFO] Finished exporting matches.
+Processing queries:   1%|▏         | 13/891 [01:20<1:27:49,  6.00s/it]progress: 0.015712682379349047 | query: 1740062704.734800478.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.68it/s]
+[2025/03/26 22:27:58 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.25it/s][A100%|██████████| 1/1 [00:00<00:00,  6.03it/s]
+[2025/03/26 22:28:03 hloc INFO] Finished exporting features.
+[2025/03/26 22:28:03 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:28:04 hloc INFO] Found 20 pairs.
+[2025/03/26 22:28:04 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.64it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 29.27it/s][A
+ 90%|█████████ | 18/20 [00:00<00:00, 44.59it/s][A100%|██████████| 20/20 [00:00<00:00, 41.38it/s]
+[2025/03/26 22:28:04 hloc INFO] Finished exporting matches.
+Processing queries:   2%|▏         | 14/891 [01:26<1:27:37,  6.00s/it]progress: 0.016835016835016835 | query: 1740062704.946166926.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.83it/s]
+[2025/03/26 22:28:04 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.30it/s][A100%|██████████| 1/1 [00:00<00:00,  6.09it/s]
+[2025/03/26 22:28:09 hloc INFO] Finished exporting features.
+[2025/03/26 22:28:09 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:28:10 hloc INFO] Found 20 pairs.
+[2025/03/26 22:28:10 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.60it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 29.73it/s][A
+ 85%|████████▌ | 17/20 [00:00<00:00, 43.04it/s][A100%|██████████| 20/20 [00:00<00:00, 41.55it/s]
+[2025/03/26 22:28:10 hloc INFO] Finished exporting matches.
+Processing queries:   2%|▏         | 15/891 [01:32<1:27:25,  5.99s/it]progress: 0.017957351290684626 | query: 1740062705.138924837.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.29it/s]
+[2025/03/26 22:28:10 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.24it/s][A100%|██████████| 1/1 [00:00<00:00,  5.97it/s]
+[2025/03/26 22:28:15 hloc INFO] Finished exporting features.
+[2025/03/26 22:28:15 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:28:16 hloc INFO] Found 20 pairs.
+[2025/03/26 22:28:16 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.68it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 29.35it/s][A
+ 90%|█████████ | 18/20 [00:00<00:00, 44.97it/s][A100%|██████████| 20/20 [00:00<00:00, 41.84it/s]
+[2025/03/26 22:28:16 hloc INFO] Finished exporting matches.
+Processing queries:   2%|▏         | 16/891 [01:38<1:27:22,  5.99s/it]progress: 0.019079685746352413 | query: 1740062705.344052863.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.26it/s]
+[2025/03/26 22:28:16 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.09it/s][A100%|██████████| 1/1 [00:00<00:00,  5.90it/s]
+[2025/03/26 22:28:21 hloc INFO] Finished exporting features.
+[2025/03/26 22:28:21 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:28:22 hloc INFO] Found 20 pairs.
+[2025/03/26 22:28:22 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:05,  3.66it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 25.24it/s][A
+ 80%|████████  | 16/20 [00:00<00:00, 35.62it/s][A100%|██████████| 20/20 [00:00<00:00, 35.27it/s]
+[2025/03/26 22:28:22 hloc INFO] Finished exporting matches.
+Processing queries:   2%|▏         | 17/891 [01:44<1:27:41,  6.02s/it]progress: 0.020202020202020204 | query: 1740062705.546392940.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.72it/s]
+[2025/03/26 22:28:22 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.14it/s][A100%|██████████| 1/1 [00:00<00:00,  5.95it/s]
+[2025/03/26 22:28:27 hloc INFO] Finished exporting features.
+[2025/03/26 22:28:27 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:28:28 hloc INFO] Found 20 pairs.
+[2025/03/26 22:28:28 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.48it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.41it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.59it/s][A100%|██████████| 20/20 [00:00<00:00, 36.69it/s]
+[2025/03/26 22:28:28 hloc INFO] Finished exporting matches.
+Processing queries:   2%|▏         | 18/891 [01:50<1:27:46,  6.03s/it]progress: 0.02132435465768799 | query: 1740062705.744506771.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.48it/s]
+[2025/03/26 22:28:29 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.33it/s][A100%|██████████| 1/1 [00:00<00:00,  6.93it/s]
+[2025/03/26 22:28:33 hloc INFO] Finished exporting features.
+[2025/03/26 22:28:33 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:28:34 hloc INFO] Found 20 pairs.
+[2025/03/26 22:28:34 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.71it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 23.65it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 35.83it/s][A100%|██████████| 20/20 [00:00<00:00, 37.20it/s]
+[2025/03/26 22:28:34 hloc INFO] Finished exporting matches.
+Processing queries:   2%|▏         | 19/891 [01:56<1:27:40,  6.03s/it]progress: 0.02244668911335578 | query: 1740062705.942508894.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.98it/s]
+[2025/03/26 22:28:35 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.70it/s][A100%|██████████| 1/1 [00:00<00:00,  5.64it/s]
+[2025/03/26 22:28:39 hloc INFO] Finished exporting features.
+[2025/03/26 22:28:39 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:28:40 hloc INFO] Found 20 pairs.
+[2025/03/26 22:28:40 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  5.18it/s][A
+ 25%|██▌       | 5/20 [00:00<00:00, 17.45it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 31.54it/s][A
+100%|██████████| 20/20 [00:00<00:00, 42.60it/s][A100%|██████████| 20/20 [00:00<00:00, 37.08it/s]
+[2025/03/26 22:28:40 hloc INFO] Finished exporting matches.
+Processing queries:   2%|▏         | 20/891 [02:03<1:27:46,  6.05s/it]progress: 0.02356902356902357 | query: 1740062706.147285767.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.56it/s]
+[2025/03/26 22:28:41 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.02it/s][A100%|██████████| 1/1 [00:00<00:00,  6.65it/s]
+[2025/03/26 22:28:45 hloc INFO] Finished exporting features.
+[2025/03/26 22:28:45 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:28:46 hloc INFO] Found 20 pairs.
+[2025/03/26 22:28:46 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.62it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.54it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.90it/s][A100%|██████████| 20/20 [00:00<00:00, 36.27it/s]
+[2025/03/26 22:28:46 hloc INFO] Finished exporting matches.
+Processing queries:   2%|▏         | 21/891 [02:09<1:27:44,  6.05s/it]progress: 0.024691358024691357 | query: 1740062706.349017261.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.23it/s]
+[2025/03/26 22:28:47 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.20it/s][A100%|██████████| 1/1 [00:00<00:00,  5.92it/s]
+[2025/03/26 22:28:52 hloc INFO] Finished exporting features.
+[2025/03/26 22:28:52 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:28:52 hloc INFO] Found 20 pairs.
+[2025/03/26 22:28:52 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.61it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 23.07it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.87it/s][A100%|██████████| 20/20 [00:00<00:00, 36.79it/s]
+[2025/03/26 22:28:53 hloc INFO] Finished exporting matches.
+Processing queries:   2%|▏         | 22/891 [02:15<1:27:38,  6.05s/it]progress: 0.025813692480359147 | query: 1740062706.550006965.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.05it/s]
+[2025/03/26 22:28:53 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.49it/s][A100%|██████████| 1/1 [00:00<00:00,  6.76it/s]
+[2025/03/26 22:28:58 hloc INFO] Finished exporting features.
+[2025/03/26 22:28:58 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:28:58 hloc INFO] Found 20 pairs.
+[2025/03/26 22:28:58 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.40it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.20it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 32.11it/s][A100%|██████████| 20/20 [00:00<00:00, 35.75it/s]
+[2025/03/26 22:28:59 hloc INFO] Finished exporting matches.
+Processing queries:   3%|▎         | 23/891 [02:21<1:27:30,  6.05s/it]progress: 0.026936026936026935 | query: 1740062706.754425742.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.94it/s]
+[2025/03/26 22:28:59 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.02it/s][A100%|██████████| 1/1 [00:00<00:00,  6.35it/s]
+[2025/03/26 22:29:04 hloc INFO] Finished exporting features.
+[2025/03/26 22:29:04 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:29:04 hloc INFO] Found 20 pairs.
+[2025/03/26 22:29:04 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.81it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.63it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 32.21it/s][A
+100%|██████████| 20/20 [00:00<00:00, 40.35it/s][A100%|██████████| 20/20 [00:00<00:00, 35.44it/s]
+[2025/03/26 22:29:05 hloc INFO] Finished exporting matches.
+Processing queries:   3%|▎         | 24/891 [02:27<1:28:00,  6.09s/it]progress: 0.028058361391694726 | query: 1740062706.959700069.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.96it/s]
+[2025/03/26 22:29:05 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.34it/s][A100%|██████████| 1/1 [00:00<00:00,  6.91it/s]
+[2025/03/26 22:29:10 hloc INFO] Finished exporting features.
+[2025/03/26 22:29:10 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:29:10 hloc INFO] Found 20 pairs.
+[2025/03/26 22:29:10 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.47it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.69it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 32.56it/s][A100%|██████████| 20/20 [00:00<00:00, 36.38it/s]
+[2025/03/26 22:29:11 hloc INFO] Finished exporting matches.
+Processing queries:   3%|▎         | 25/891 [02:33<1:27:40,  6.07s/it]progress: 0.029180695847362513 | query: 1740062707.165546994.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.58it/s]
+[2025/03/26 22:29:11 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.62it/s][A100%|██████████| 1/1 [00:00<00:00,  6.35it/s]
+[2025/03/26 22:29:16 hloc INFO] Finished exporting features.
+[2025/03/26 22:29:16 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:29:16 hloc INFO] Found 20 pairs.
+[2025/03/26 22:29:16 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.26it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.07it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.07it/s][A100%|██████████| 20/20 [00:00<00:00, 34.94it/s]
+[2025/03/26 22:29:17 hloc INFO] Finished exporting matches.
+Processing queries:   3%|▎         | 26/891 [02:39<1:27:34,  6.07s/it]progress: 0.030303030303030304 | query: 1740062707.363723422.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.31it/s]
+[2025/03/26 22:29:17 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.30it/s][A100%|██████████| 1/1 [00:00<00:00,  6.93it/s]
+[2025/03/26 22:29:22 hloc INFO] Finished exporting features.
+[2025/03/26 22:29:22 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:29:22 hloc INFO] Found 20 pairs.
+[2025/03/26 22:29:22 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.76it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.91it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 32.80it/s][A
+100%|██████████| 20/20 [00:00<00:00, 40.68it/s][A100%|██████████| 20/20 [00:00<00:00, 35.86it/s]
+[2025/03/26 22:29:23 hloc INFO] Finished exporting matches.
+Processing queries:   3%|▎         | 27/891 [02:45<1:27:28,  6.07s/it]progress: 0.031425364758698095 | query: 1740062707.559827791.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.05it/s]
+[2025/03/26 22:29:23 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.27it/s][A100%|██████████| 1/1 [00:00<00:00,  6.83it/s]
+[2025/03/26 22:29:28 hloc INFO] Finished exporting features.
+[2025/03/26 22:29:28 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:29:28 hloc INFO] Found 20 pairs.
+[2025/03/26 22:29:28 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.47it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.37it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.83it/s][A100%|██████████| 20/20 [00:00<00:00, 35.79it/s]
+[2025/03/26 22:29:29 hloc INFO] Finished exporting matches.
+Processing queries:   3%|▎         | 28/891 [02:51<1:27:11,  6.06s/it]progress: 0.03254769921436588 | query: 1740062707.765908220.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.70it/s]
+[2025/03/26 22:29:29 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.86it/s][A100%|██████████| 1/1 [00:00<00:00,  6.41it/s]
+[2025/03/26 22:29:34 hloc INFO] Finished exporting features.
+[2025/03/26 22:29:34 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:29:34 hloc INFO] Found 20 pairs.
+[2025/03/26 22:29:34 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.40it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.58it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.49it/s][A100%|██████████| 20/20 [00:00<00:00, 36.49it/s]
+[2025/03/26 22:29:35 hloc INFO] Finished exporting matches.
+Processing queries:   3%|▎         | 29/891 [02:57<1:27:02,  6.06s/it]progress: 0.03367003367003367 | query: 1740062707.963906676.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  7.47it/s]
+[2025/03/26 22:29:35 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.03it/s][A100%|██████████| 1/1 [00:00<00:00,  6.64it/s]
+[2025/03/26 22:29:40 hloc INFO] Finished exporting features.
+[2025/03/26 22:29:40 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:29:40 hloc INFO] Found 20 pairs.
+[2025/03/26 22:29:40 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.75it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 25.91it/s][A
+ 75%|███████▌  | 15/20 [00:00<00:00, 37.33it/s][A100%|██████████| 20/20 [00:00<00:00, 37.85it/s]
+[2025/03/26 22:29:41 hloc INFO] Finished exporting matches.
+Processing queries:   3%|▎         | 30/891 [03:03<1:26:57,  6.06s/it]progress: 0.03479236812570146 | query: 1740062708.171400186.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.05it/s]
+[2025/03/26 22:29:41 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.37it/s][A100%|██████████| 1/1 [00:00<00:00,  6.90it/s]
+[2025/03/26 22:29:46 hloc INFO] Finished exporting features.
+[2025/03/26 22:29:46 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:29:46 hloc INFO] Found 20 pairs.
+[2025/03/26 22:29:46 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.33it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.17it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 32.05it/s][A100%|██████████| 20/20 [00:00<00:00, 35.52it/s]
+[2025/03/26 22:29:47 hloc INFO] Finished exporting matches.
+Processing queries:   3%|▎         | 31/891 [03:09<1:26:49,  6.06s/it]progress: 0.03591470258136925 | query: 1740062708.369087763.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.07it/s]
+[2025/03/26 22:29:47 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.62it/s][A100%|██████████| 1/1 [00:00<00:00,  7.03it/s]
+[2025/03/26 22:29:52 hloc INFO] Finished exporting features.
+[2025/03/26 22:29:52 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:29:53 hloc INFO] Found 20 pairs.
+[2025/03/26 22:29:53 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.69it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.97it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 32.96it/s][A
+100%|██████████| 20/20 [00:00<00:00, 41.11it/s][A100%|██████████| 20/20 [00:00<00:00, 36.12it/s]
+[2025/03/26 22:29:53 hloc INFO] Finished exporting matches.
+Processing queries:   4%|▎         | 32/891 [03:15<1:26:37,  6.05s/it]progress: 0.037037037037037035 | query: 1740062708.573824450.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.24it/s]
+[2025/03/26 22:29:53 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.14it/s][A100%|██████████| 1/1 [00:00<00:00,  6.81it/s]
+[2025/03/26 22:29:58 hloc INFO] Finished exporting features.
+[2025/03/26 22:29:58 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:29:59 hloc INFO] Found 20 pairs.
+[2025/03/26 22:29:59 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.84it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 24.00it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 33.70it/s][A100%|██████████| 20/20 [00:00<00:00, 37.13it/s]
+[2025/03/26 22:29:59 hloc INFO] Finished exporting matches.
+Processing queries:   4%|▎         | 33/891 [03:21<1:26:28,  6.05s/it]progress: 0.038159371492704826 | query: 1740062708.774509916.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.04it/s]
+[2025/03/26 22:29:59 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.47it/s][A100%|██████████| 1/1 [00:00<00:00,  6.94it/s]
+[2025/03/26 22:30:04 hloc INFO] Finished exporting features.
+[2025/03/26 22:30:04 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:30:05 hloc INFO] Found 20 pairs.
+[2025/03/26 22:30:05 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.38it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.24it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 32.50it/s][A
+100%|██████████| 20/20 [00:00<00:00, 40.96it/s][A100%|██████████| 20/20 [00:00<00:00, 35.74it/s]
+[2025/03/26 22:30:05 hloc INFO] Finished exporting matches.
+Processing queries:   4%|▍         | 34/891 [03:27<1:26:22,  6.05s/it]progress: 0.03928170594837262 | query: 1740062708.975879757.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.87it/s]
+[2025/03/26 22:30:05 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.69it/s][A100%|██████████| 1/1 [00:00<00:00,  6.98it/s]
+[2025/03/26 22:30:10 hloc INFO] Finished exporting features.
+[2025/03/26 22:30:10 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:30:11 hloc INFO] Found 20 pairs.
+[2025/03/26 22:30:11 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.12it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.51it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.33it/s][A100%|██████████| 20/20 [00:00<00:00, 35.10it/s]
+[2025/03/26 22:30:11 hloc INFO] Finished exporting matches.
+Processing queries:   4%|▍         | 35/891 [03:33<1:26:17,  6.05s/it]progress: 0.04040404040404041 | query: 1740062709.177503802.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.45it/s]
+[2025/03/26 22:30:12 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.58it/s][A100%|██████████| 1/1 [00:00<00:00,  7.08it/s]
+[2025/03/26 22:30:16 hloc INFO] Finished exporting features.
+[2025/03/26 22:30:16 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:30:17 hloc INFO] Found 20 pairs.
+[2025/03/26 22:30:17 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.49it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.16it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.35it/s][A100%|██████████| 20/20 [00:00<00:00, 35.41it/s]
+[2025/03/26 22:30:17 hloc INFO] Finished exporting matches.
+Processing queries:   4%|▍         | 36/891 [03:39<1:26:10,  6.05s/it]progress: 0.04152637485970819 | query: 1740062709.378844690.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.06it/s]
+[2025/03/26 22:30:18 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.68it/s][A100%|██████████| 1/1 [00:00<00:00,  6.78it/s]
+[2025/03/26 22:30:22 hloc INFO] Finished exporting features.
+[2025/03/26 22:30:22 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:30:23 hloc INFO] Found 20 pairs.
+[2025/03/26 22:30:23 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.45it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.58it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 35.03it/s][A100%|██████████| 20/20 [00:00<00:00, 36.69it/s]
+[2025/03/26 22:30:23 hloc INFO] Finished exporting matches.
+Processing queries:   4%|▍         | 37/891 [03:45<1:25:57,  6.04s/it]progress: 0.04264870931537598 | query: 1740062709.589276538.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.77it/s]
+[2025/03/26 22:30:24 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.44it/s][A100%|██████████| 1/1 [00:00<00:00,  7.01it/s]
+[2025/03/26 22:30:28 hloc INFO] Finished exporting features.
+[2025/03/26 22:30:28 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:30:29 hloc INFO] Found 20 pairs.
+[2025/03/26 22:30:29 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.55it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 23.13it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.71it/s][A100%|██████████| 20/20 [00:00<00:00, 36.79it/s]
+[2025/03/26 22:30:29 hloc INFO] Finished exporting matches.
+Processing queries:   4%|▍         | 38/891 [03:52<1:25:50,  6.04s/it]progress: 0.04377104377104377 | query: 1740062709.786828323.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.55it/s]
+[2025/03/26 22:30:30 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.37it/s][A100%|██████████| 1/1 [00:00<00:00,  6.93it/s]
+[2025/03/26 22:30:34 hloc INFO] Finished exporting features.
+[2025/03/26 22:30:34 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:30:35 hloc INFO] Found 20 pairs.
+[2025/03/26 22:30:35 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.43it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 24.55it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.56it/s][A100%|██████████| 20/20 [00:00<00:00, 35.49it/s]
+[2025/03/26 22:30:35 hloc INFO] Finished exporting matches.
+Processing queries:   4%|▍         | 39/891 [03:58<1:25:49,  6.04s/it]progress: 0.04489337822671156 | query: 1740062709.984489872.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.75it/s]
+[2025/03/26 22:30:36 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.27it/s][A100%|██████████| 1/1 [00:00<00:00,  6.87it/s]
+[2025/03/26 22:30:40 hloc INFO] Finished exporting features.
+[2025/03/26 22:30:40 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:30:41 hloc INFO] Found 20 pairs.
+[2025/03/26 22:30:41 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.51it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.75it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.63it/s][A
+100%|██████████| 20/20 [00:00<00:00, 40.15it/s][A100%|██████████| 20/20 [00:00<00:00, 35.22it/s]
+[2025/03/26 22:30:42 hloc INFO] Finished exporting matches.
+Processing queries:   4%|▍         | 40/891 [04:04<1:25:46,  6.05s/it]progress: 0.04601571268237935 | query: 1740062710.186014661.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.55it/s]
+[2025/03/26 22:30:42 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.35it/s][A100%|██████████| 1/1 [00:00<00:00,  6.81it/s]
+[2025/03/26 22:30:47 hloc INFO] Finished exporting features.
+[2025/03/26 22:30:47 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:30:47 hloc INFO] Found 20 pairs.
+[2025/03/26 22:30:47 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.42it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.37it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 29.82it/s][A
+ 95%|█████████▌| 19/20 [00:00<00:00, 38.75it/s][A100%|██████████| 20/20 [00:00<00:00, 34.49it/s]
+[2025/03/26 22:30:48 hloc INFO] Finished exporting matches.
+Processing queries:   5%|▍         | 41/891 [04:10<1:25:41,  6.05s/it]progress: 0.04713804713804714 | query: 1740062710.388086379.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.24it/s]
+[2025/03/26 22:30:48 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.90it/s][A100%|██████████| 1/1 [00:00<00:00,  5.60it/s]
+[2025/03/26 22:30:53 hloc INFO] Finished exporting features.
+[2025/03/26 22:30:53 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:30:53 hloc INFO] Found 20 pairs.
+[2025/03/26 22:30:53 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.39it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.53it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.26it/s][A
+100%|██████████| 20/20 [00:00<00:00, 39.11it/s][A100%|██████████| 20/20 [00:00<00:00, 34.41it/s]
+[2025/03/26 22:30:54 hloc INFO] Finished exporting matches.
+Processing queries:   5%|▍         | 42/891 [04:16<1:25:53,  6.07s/it]progress: 0.04826038159371493 | query: 1740062710.594987495.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.38it/s]
+[2025/03/26 22:30:54 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.88it/s][A100%|██████████| 1/1 [00:00<00:00,  5.76it/s]
+[2025/03/26 22:30:59 hloc INFO] Finished exporting features.
+[2025/03/26 22:30:59 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:30:59 hloc INFO] Found 20 pairs.
+[2025/03/26 22:30:59 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.44it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.17it/s][A
+ 55%|█████▌    | 11/20 [00:00<00:00, 18.31it/s][A
+ 70%|███████   | 14/20 [00:01<00:00, 10.61it/s][A100%|██████████| 20/20 [00:01<00:00, 14.46it/s]
+[2025/03/26 22:31:01 hloc INFO] Finished exporting matches.
+Processing queries:   5%|▍         | 43/891 [04:23<1:29:29,  6.33s/it]progress: 0.04938271604938271 | query: 1740062710.795494481.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.80it/s]
+[2025/03/26 22:31:01 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.78it/s][A100%|██████████| 1/1 [00:00<00:00,  5.64it/s]
+[2025/03/26 22:31:06 hloc INFO] Finished exporting features.
+[2025/03/26 22:31:06 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:31:06 hloc INFO] Found 20 pairs.
+[2025/03/26 22:31:06 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.46it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.41it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 29.97it/s][A100%|██████████| 20/20 [00:00<00:00, 35.97it/s]
+[2025/03/26 22:31:07 hloc INFO] Finished exporting matches.
+Processing queries:   5%|▍         | 44/891 [04:29<1:28:35,  6.28s/it]progress: 0.050505050505050504 | query: 1740062710.997559165.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.51it/s]
+[2025/03/26 22:31:07 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.85it/s][A100%|██████████| 1/1 [00:00<00:00,  5.71it/s]
+[2025/03/26 22:31:12 hloc INFO] Finished exporting features.
+[2025/03/26 22:31:12 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:31:12 hloc INFO] Found 20 pairs.
+[2025/03/26 22:31:12 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.34it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.57it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.14it/s][A100%|██████████| 20/20 [00:00<00:00, 35.01it/s]
+[2025/03/26 22:31:13 hloc INFO] Finished exporting matches.
+Processing queries:   5%|▌         | 45/891 [04:35<1:27:43,  6.22s/it]progress: 0.051627384960718295 | query: 1740062711.198096877.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.61it/s]
+[2025/03/26 22:31:13 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.00it/s][A100%|██████████| 1/1 [00:00<00:00,  5.78it/s]
+[2025/03/26 22:31:18 hloc INFO] Finished exporting features.
+[2025/03/26 22:31:18 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:31:18 hloc INFO] Found 20 pairs.
+[2025/03/26 22:31:18 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.39it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.06it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.15it/s][A100%|██████████| 20/20 [00:00<00:00, 34.99it/s]
+[2025/03/26 22:31:19 hloc INFO] Finished exporting matches.
+Processing queries:   5%|▌         | 46/891 [04:41<1:27:03,  6.18s/it]progress: 0.052749719416386086 | query: 1740062711.398778157.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.83it/s]
+[2025/03/26 22:31:19 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.18it/s][A100%|██████████| 1/1 [00:00<00:00,  5.98it/s]
+[2025/03/26 22:31:24 hloc INFO] Finished exporting features.
+[2025/03/26 22:31:24 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:31:24 hloc INFO] Found 20 pairs.
+[2025/03/26 22:31:24 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.50it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.54it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.09it/s][A
+100%|██████████| 20/20 [00:00<00:00, 38.43it/s][A100%|██████████| 20/20 [00:00<00:00, 33.96it/s]
+[2025/03/26 22:31:25 hloc INFO] Finished exporting matches.
+Processing queries:   5%|▌         | 47/891 [04:47<1:26:40,  6.16s/it]progress: 0.05387205387205387 | query: 1740062711.606432725.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.61it/s]
+[2025/03/26 22:31:25 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.39it/s][A100%|██████████| 1/1 [00:00<00:00,  6.09it/s]
+[2025/03/26 22:31:30 hloc INFO] Finished exporting features.
+[2025/03/26 22:31:30 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:31:30 hloc INFO] Found 20 pairs.
+[2025/03/26 22:31:30 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.38it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.57it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.08it/s][A
+100%|██████████| 20/20 [00:00<00:00, 38.73it/s][A100%|██████████| 20/20 [00:00<00:00, 34.13it/s]
+[2025/03/26 22:31:31 hloc INFO] Finished exporting matches.
+Processing queries:   5%|▌         | 48/891 [04:53<1:26:17,  6.14s/it]progress: 0.05499438832772166 | query: 1740062711.802566270.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.47it/s]
+[2025/03/26 22:31:31 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.30it/s][A100%|██████████| 1/1 [00:00<00:00,  6.04it/s]
+[2025/03/26 22:31:36 hloc INFO] Finished exporting features.
+[2025/03/26 22:31:36 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:31:37 hloc INFO] Found 20 pairs.
+[2025/03/26 22:31:37 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.40it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.35it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.10it/s][A
+100%|██████████| 20/20 [00:00<00:00, 38.85it/s][A100%|██████████| 20/20 [00:00<00:00, 34.27it/s]
+[2025/03/26 22:31:37 hloc INFO] Finished exporting matches.
+Processing queries:   5%|▌         | 49/891 [04:59<1:25:58,  6.13s/it]progress: 0.05611672278338945 | query: 1740062712.8328187.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.70it/s]
+[2025/03/26 22:31:37 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.14it/s][A100%|██████████| 1/1 [00:00<00:00,  5.98it/s]
+[2025/03/26 22:31:42 hloc INFO] Finished exporting features.
+[2025/03/26 22:31:42 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:31:43 hloc INFO] Found 20 pairs.
+[2025/03/26 22:31:43 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.46it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.86it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.01it/s][A100%|██████████| 20/20 [00:00<00:00, 34.93it/s]
+[2025/03/26 22:31:43 hloc INFO] Finished exporting matches.
+Processing queries:   6%|▌         | 50/891 [05:05<1:25:33,  6.10s/it]progress: 0.05723905723905724 | query: 1740062712.206988304.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.94it/s]
+[2025/03/26 22:31:44 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.20it/s][A100%|██████████| 1/1 [00:00<00:00,  6.63it/s]
+[2025/03/26 22:31:48 hloc INFO] Finished exporting features.
+[2025/03/26 22:31:48 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:31:49 hloc INFO] Found 20 pairs.
+[2025/03/26 22:31:49 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.72it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.67it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 29.87it/s][A
+ 95%|█████████▌| 19/20 [00:00<00:00, 37.81it/s][A100%|██████████| 20/20 [00:00<00:00, 34.30it/s]
+[2025/03/26 22:31:49 hloc INFO] Finished exporting matches.
+Processing queries:   6%|▌         | 51/891 [05:11<1:25:18,  6.09s/it]progress: 0.058361391694725026 | query: 1740062712.407515877.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.09it/s]
+[2025/03/26 22:31:50 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.08it/s][A100%|██████████| 1/1 [00:00<00:00,  5.91it/s]
+[2025/03/26 22:31:54 hloc INFO] Finished exporting features.
+[2025/03/26 22:31:54 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:31:55 hloc INFO] Found 20 pairs.
+[2025/03/26 22:31:55 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.66it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.21it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.22it/s][A
+100%|██████████| 20/20 [00:00<00:00, 39.09it/s][A100%|██████████| 20/20 [00:00<00:00, 34.52it/s]
+[2025/03/26 22:31:55 hloc INFO] Finished exporting matches.
+Processing queries:   6%|▌         | 52/891 [05:18<1:25:07,  6.09s/it]progress: 0.05948372615039282 | query: 1740062712.613477686.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.81it/s]
+[2025/03/26 22:31:56 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.81it/s][A100%|██████████| 1/1 [00:00<00:00,  5.67it/s]
+[2025/03/26 22:32:00 hloc INFO] Finished exporting features.
+[2025/03/26 22:32:01 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:32:01 hloc INFO] Found 20 pairs.
+[2025/03/26 22:32:01 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.53it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.34it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.51it/s][A100%|██████████| 20/20 [00:00<00:00, 35.06it/s]
+[2025/03/26 22:32:02 hloc INFO] Finished exporting matches.
+Processing queries:   6%|▌         | 53/891 [05:24<1:24:56,  6.08s/it]progress: 0.06060606060606061 | query: 1740062712.819050740.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.87it/s]
+[2025/03/26 22:32:02 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.23it/s][A100%|██████████| 1/1 [00:00<00:00,  5.93it/s]
+[2025/03/26 22:32:07 hloc INFO] Finished exporting features.
+[2025/03/26 22:32:07 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:32:07 hloc INFO] Found 20 pairs.
+[2025/03/26 22:32:07 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.45it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.44it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 29.58it/s][A
+ 95%|█████████▌| 19/20 [00:00<00:00, 37.81it/s][A100%|██████████| 20/20 [00:00<00:00, 33.89it/s]
+[2025/03/26 22:32:08 hloc INFO] Finished exporting matches.
+Processing queries:   6%|▌         | 54/891 [05:30<1:24:58,  6.09s/it]progress: 0.06172839506172839 | query: 1740062713.14814968.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  7.96it/s]
+[2025/03/26 22:32:08 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.91it/s][A100%|██████████| 1/1 [00:00<00:00,  6.62it/s]
+[2025/03/26 22:32:13 hloc INFO] Finished exporting features.
+[2025/03/26 22:32:13 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:32:13 hloc INFO] Found 20 pairs.
+[2025/03/26 22:32:13 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.40it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.63it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.40it/s][A
+100%|██████████| 20/20 [00:00<00:00, 39.26it/s][A100%|██████████| 20/20 [00:00<00:00, 34.49it/s]
+[2025/03/26 22:32:14 hloc INFO] Finished exporting matches.
+Processing queries:   6%|▌         | 55/891 [05:36<1:24:49,  6.09s/it]progress: 0.06285072951739619 | query: 1740062713.215332142.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.03it/s]
+[2025/03/26 22:32:14 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.92it/s][A100%|██████████| 1/1 [00:00<00:00,  5.57it/s]
+[2025/03/26 22:32:19 hloc INFO] Finished exporting features.
+[2025/03/26 22:32:19 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:32:19 hloc INFO] Found 20 pairs.
+[2025/03/26 22:32:19 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.64it/s][A
+ 25%|██▌       | 5/20 [00:00<00:00, 16.50it/s][A
+ 55%|█████▌    | 11/20 [00:00<00:00, 27.96it/s][A
+ 90%|█████████ | 18/20 [00:00<00:00, 36.93it/s][A100%|██████████| 20/20 [00:00<00:00, 33.71it/s]
+[2025/03/26 22:32:20 hloc INFO] Finished exporting matches.
+Processing queries:   6%|▋         | 56/891 [05:42<1:24:44,  6.09s/it]progress: 0.06397306397306397 | query: 1740062713.418247160.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.08it/s]
+[2025/03/26 22:32:20 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.17it/s][A100%|██████████| 1/1 [00:00<00:00,  5.95it/s]
+[2025/03/26 22:32:25 hloc INFO] Finished exporting features.
+[2025/03/26 22:32:25 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:32:25 hloc INFO] Found 20 pairs.
+[2025/03/26 22:32:25 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.41it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.66it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 30.58it/s][A
+100%|██████████| 20/20 [00:00<00:00, 38.31it/s][A100%|██████████| 20/20 [00:00<00:00, 33.84it/s]
+[2025/03/26 22:32:26 hloc INFO] Finished exporting matches.
+Processing queries:   6%|▋         | 57/891 [05:48<1:24:38,  6.09s/it]progress: 0.06509539842873176 | query: 1740062713.622500017.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.92it/s]
+[2025/03/26 22:32:26 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.95it/s][A100%|██████████| 1/1 [00:00<00:00,  5.84it/s]
+[2025/03/26 22:32:31 hloc INFO] Finished exporting features.
+[2025/03/26 22:32:31 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:32:31 hloc INFO] Found 20 pairs.
+[2025/03/26 22:32:31 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.43it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.81it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.43it/s][A
+100%|██████████| 20/20 [00:00<00:00, 39.17it/s][A100%|██████████| 20/20 [00:00<00:00, 34.40it/s]
+[2025/03/26 22:32:32 hloc INFO] Finished exporting matches.
+Processing queries:   7%|▋         | 58/891 [05:54<1:24:28,  6.08s/it]progress: 0.06621773288439955 | query: 1740062713.824115925.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.45it/s]
+[2025/03/26 22:32:32 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.97it/s][A100%|██████████| 1/1 [00:00<00:00,  5.84it/s]
+[2025/03/26 22:32:37 hloc INFO] Finished exporting features.
+[2025/03/26 22:32:37 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:32:37 hloc INFO] Found 20 pairs.
+[2025/03/26 22:32:37 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.09it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 20.34it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 30.11it/s][A
+100%|██████████| 20/20 [00:00<00:00, 38.32it/s][A100%|██████████| 20/20 [00:00<00:00, 33.59it/s]
+[2025/03/26 22:32:38 hloc INFO] Finished exporting matches.
+Processing queries:   7%|▋         | 59/891 [06:00<1:24:29,  6.09s/it]progress: 0.06734006734006734 | query: 1740062714.28873472.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.25it/s]
+[2025/03/26 22:32:38 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.18it/s][A100%|██████████| 1/1 [00:00<00:00,  5.91it/s]
+[2025/03/26 22:32:43 hloc INFO] Finished exporting features.
+[2025/03/26 22:32:43 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:32:43 hloc INFO] Found 20 pairs.
+[2025/03/26 22:32:43 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.80it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 23.38it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.98it/s][A100%|██████████| 20/20 [00:00<00:00, 36.52it/s]
+[2025/03/26 22:32:44 hloc INFO] Finished exporting matches.
+Processing queries:   7%|▋         | 60/891 [06:06<1:24:10,  6.08s/it]progress: 0.06846240179573512 | query: 1740062714.225591194.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.03it/s]
+[2025/03/26 22:32:44 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.21it/s][A100%|██████████| 1/1 [00:00<00:00,  5.97it/s]
+[2025/03/26 22:32:49 hloc INFO] Finished exporting features.
+[2025/03/26 22:32:49 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:32:50 hloc INFO] Found 20 pairs.
+[2025/03/26 22:32:50 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.22it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 20.96it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 32.10it/s][A100%|██████████| 20/20 [00:00<00:00, 34.14it/s]
+[2025/03/26 22:32:50 hloc INFO] Finished exporting matches.
+Processing queries:   7%|▋         | 61/891 [06:12<1:24:04,  6.08s/it]progress: 0.06958473625140292 | query: 1740062714.436070040.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.80it/s]
+[2025/03/26 22:32:50 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.00it/s][A100%|██████████| 1/1 [00:00<00:00,  5.88it/s]
+[2025/03/26 22:32:55 hloc INFO] Finished exporting features.
+[2025/03/26 22:32:55 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:32:56 hloc INFO] Found 20 pairs.
+[2025/03/26 22:32:56 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:06,  3.10it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 17.47it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 28.02it/s][A100%|██████████| 20/20 [00:00<00:00, 30.01it/s]
+[2025/03/26 22:32:56 hloc INFO] Finished exporting matches.
+Processing queries:   7%|▋         | 62/891 [06:18<1:24:16,  6.10s/it]progress: 0.0707070707070707 | query: 1740062714.632084433.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.09it/s]
+[2025/03/26 22:32:57 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.05it/s][A100%|██████████| 1/1 [00:00<00:00,  5.93it/s]
+[2025/03/26 22:33:01 hloc INFO] Finished exporting features.
+[2025/03/26 22:33:01 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:33:02 hloc INFO] Found 20 pairs.
+[2025/03/26 22:33:02 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.51it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.79it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.51it/s][A100%|██████████| 20/20 [00:00<00:00, 36.36it/s]
+[2025/03/26 22:33:02 hloc INFO] Finished exporting matches.
+Processing queries:   7%|▋         | 63/891 [06:24<1:23:56,  6.08s/it]progress: 0.0718294051627385 | query: 1740062714.839323387.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.73it/s]
+[2025/03/26 22:33:03 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.72it/s][A100%|██████████| 1/1 [00:00<00:00,  5.66it/s]
+[2025/03/26 22:33:07 hloc INFO] Finished exporting features.
+[2025/03/26 22:33:07 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:33:08 hloc INFO] Found 20 pairs.
+[2025/03/26 22:33:08 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.37it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.97it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.78it/s][A100%|██████████| 20/20 [00:00<00:00, 35.56it/s]
+[2025/03/26 22:33:08 hloc INFO] Finished exporting matches.
+Processing queries:   7%|▋         | 64/891 [06:31<1:23:48,  6.08s/it]progress: 0.07295173961840629 | query: 1740062715.45289893.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.21it/s]
+[2025/03/26 22:33:09 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.35it/s][A100%|██████████| 1/1 [00:00<00:00,  6.11it/s]
+[2025/03/26 22:33:14 hloc INFO] Finished exporting features.
+[2025/03/26 22:33:14 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:33:14 hloc INFO] Found 20 pairs.
+[2025/03/26 22:33:14 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.81it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 23.28it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.98it/s][A100%|██████████| 20/20 [00:00<00:00, 36.43it/s]
+[2025/03/26 22:33:15 hloc INFO] Finished exporting matches.
+Processing queries:   7%|▋         | 65/891 [06:37<1:25:36,  6.22s/it]progress: 0.07407407407407407 | query: 1740062715.235564082.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.95it/s]
+[2025/03/26 22:33:15 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.87it/s][A100%|██████████| 1/1 [00:00<00:00,  5.70it/s]
+[2025/03/26 22:33:20 hloc INFO] Finished exporting features.
+[2025/03/26 22:33:20 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:33:20 hloc INFO] Found 20 pairs.
+[2025/03/26 22:33:20 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.60it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.53it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.97it/s][A
+100%|██████████| 20/20 [00:00<00:00, 40.41it/s][A100%|██████████| 20/20 [00:00<00:00, 35.51it/s]
+[2025/03/26 22:33:21 hloc INFO] Finished exporting matches.
+Processing queries:   7%|▋         | 66/891 [06:43<1:25:01,  6.18s/it]progress: 0.07519640852974187 | query: 1740062715.439489190.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.72it/s]
+[2025/03/26 22:33:21 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.37it/s][A100%|██████████| 1/1 [00:00<00:00,  6.04it/s]
+[2025/03/26 22:33:26 hloc INFO] Finished exporting features.
+[2025/03/26 22:33:26 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:33:27 hloc INFO] Found 20 pairs.
+[2025/03/26 22:33:27 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.42it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.12it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.74it/s][A100%|██████████| 20/20 [00:00<00:00, 35.36it/s]
+[2025/03/26 22:33:27 hloc INFO] Finished exporting matches.
+Processing queries:   8%|▊         | 67/891 [06:49<1:24:22,  6.14s/it]progress: 0.07631874298540965 | query: 1740062715.649083558.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.08it/s]
+[2025/03/26 22:33:27 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.18it/s][A100%|██████████| 1/1 [00:00<00:00,  5.94it/s]
+[2025/03/26 22:33:32 hloc INFO] Finished exporting features.
+[2025/03/26 22:33:32 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:33:33 hloc INFO] Found 20 pairs.
+[2025/03/26 22:33:33 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.60it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.43it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 33.49it/s][A100%|██████████| 20/20 [00:00<00:00, 35.42it/s]
+[2025/03/26 22:33:33 hloc INFO] Finished exporting matches.
+Processing queries:   8%|▊         | 68/891 [06:55<1:23:57,  6.12s/it]progress: 0.07744107744107744 | query: 1740062715.843049006.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.05it/s]
+[2025/03/26 22:33:33 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.32it/s][A100%|██████████| 1/1 [00:00<00:00,  6.13it/s]
+[2025/03/26 22:33:38 hloc INFO] Finished exporting features.
+[2025/03/26 22:33:38 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:33:39 hloc INFO] Found 20 pairs.
+[2025/03/26 22:33:39 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.67it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.36it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.87it/s][A100%|██████████| 20/20 [00:00<00:00, 35.68it/s]
+[2025/03/26 22:33:39 hloc INFO] Finished exporting matches.
+Processing queries:   8%|▊         | 69/891 [07:01<1:23:38,  6.11s/it]progress: 0.07856341189674523 | query: 1740062716.53296961.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.00it/s]
+[2025/03/26 22:33:40 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.23it/s][A100%|██████████| 1/1 [00:00<00:00,  5.98it/s]
+[2025/03/26 22:33:44 hloc INFO] Finished exporting features.
+[2025/03/26 22:33:44 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:33:45 hloc INFO] Found 20 pairs.
+[2025/03/26 22:33:45 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.57it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.10it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.97it/s][A
+100%|██████████| 20/20 [00:00<00:00, 40.35it/s][A100%|██████████| 20/20 [00:00<00:00, 35.43it/s]
+[2025/03/26 22:33:45 hloc INFO] Finished exporting matches.
+Processing queries:   8%|▊         | 70/891 [07:07<1:23:24,  6.10s/it]progress: 0.07968574635241302 | query: 1740062716.245020408.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.08it/s]
+[2025/03/26 22:33:46 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.08it/s][A100%|██████████| 1/1 [00:00<00:00,  6.70it/s]
+[2025/03/26 22:33:50 hloc INFO] Finished exporting features.
+[2025/03/26 22:33:50 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:33:51 hloc INFO] Found 20 pairs.
+[2025/03/26 22:33:51 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.43it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.47it/s][A
+ 55%|█████▌    | 11/20 [00:00<00:00, 23.36it/s][A
+ 75%|███████▌  | 15/20 [00:00<00:00, 26.66it/s][A100%|██████████| 20/20 [00:00<00:00, 28.90it/s]
+[2025/03/26 22:33:52 hloc INFO] Finished exporting matches.
+Processing queries:   8%|▊         | 71/891 [07:14<1:23:33,  6.11s/it]progress: 0.08080808080808081 | query: 1740062716.447775306.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.95it/s]
+[2025/03/26 22:33:52 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.38it/s][A100%|██████████| 1/1 [00:00<00:00,  6.04it/s]
+[2025/03/26 22:33:57 hloc INFO] Finished exporting features.
+[2025/03/26 22:33:57 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:33:57 hloc INFO] Found 20 pairs.
+[2025/03/26 22:33:57 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.91it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 23.37it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 33.12it/s][A
+100%|██████████| 20/20 [00:00<00:00, 41.65it/s][A100%|██████████| 20/20 [00:00<00:00, 36.62it/s]
+[2025/03/26 22:33:58 hloc INFO] Finished exporting matches.
+Processing queries:   8%|▊         | 72/891 [07:20<1:23:04,  6.09s/it]progress: 0.0819304152637486 | query: 1740062716.657333618.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  1.50it/s][A100%|██████████| 1/1 [00:00<00:00,  1.43it/s]
+[2025/03/26 22:33:58 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.41it/s][A100%|██████████| 1/1 [00:00<00:00,  6.62it/s]
+[2025/03/26 22:34:03 hloc INFO] Finished exporting features.
+[2025/03/26 22:34:03 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:34:04 hloc INFO] Found 20 pairs.
+[2025/03/26 22:34:04 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.64it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 16.06it/s][A
+ 50%|█████     | 10/20 [00:00<00:00, 16.22it/s][A
+ 85%|████████▌ | 17/20 [00:01<00:00, 12.64it/s][A100%|██████████| 20/20 [00:01<00:00, 14.27it/s]
+[2025/03/26 22:34:05 hloc INFO] Finished exporting matches.
+Processing queries:   8%|▊         | 73/891 [07:27<1:28:39,  6.50s/it]progress: 0.08305274971941638 | query: 1740062716.858880128.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.10it/s]
+[2025/03/26 22:34:05 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  4.37it/s][A100%|██████████| 1/1 [00:00<00:00,  3.89it/s]
+[2025/03/26 22:34:10 hloc INFO] Finished exporting features.
+[2025/03/26 22:34:10 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:34:11 hloc INFO] Found 20 pairs.
+[2025/03/26 22:34:11 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:05,  3.46it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 20.76it/s][A
+ 80%|████████  | 16/20 [00:00<00:00, 31.77it/s][A100%|██████████| 20/20 [00:00<00:00, 31.66it/s]
+[2025/03/26 22:34:12 hloc INFO] Finished exporting matches.
+Processing queries:   8%|▊         | 74/891 [07:34<1:28:34,  6.50s/it]progress: 0.08417508417508418 | query: 1740062717.57411555.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.50it/s]
+[2025/03/26 22:34:12 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.37it/s][A100%|██████████| 1/1 [00:00<00:00,  6.91it/s]
+[2025/03/26 22:34:17 hloc INFO] Finished exporting features.
+[2025/03/26 22:34:17 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:34:17 hloc INFO] Found 20 pairs.
+[2025/03/26 22:34:17 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.85it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 20.33it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 32.68it/s][A100%|██████████| 20/20 [00:00<00:00, 36.44it/s]
+[2025/03/26 22:34:18 hloc INFO] Finished exporting matches.
+Processing queries:   8%|▊         | 75/891 [07:40<1:26:25,  6.35s/it]progress: 0.08529741863075196 | query: 1740062717.288475646.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.16it/s]
+[2025/03/26 22:34:18 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.09it/s][A100%|██████████| 1/1 [00:00<00:00,  5.89it/s]
+[2025/03/26 22:34:23 hloc INFO] Finished exporting features.
+[2025/03/26 22:34:23 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:34:23 hloc INFO] Found 20 pairs.
+[2025/03/26 22:34:23 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.64it/s][A
+ 25%|██▌       | 5/20 [00:00<00:01, 13.36it/s][A
+ 50%|█████     | 10/20 [00:01<00:01,  7.35it/s][A
+ 60%|██████    | 12/20 [00:01<00:00,  8.19it/s][A
+ 80%|████████  | 16/20 [00:01<00:00, 10.19it/s][A100%|██████████| 20/20 [00:01<00:00, 11.66it/s]
+[2025/03/26 22:34:25 hloc INFO] Finished exporting matches.
+Processing queries:   9%|▊         | 76/891 [07:47<1:29:47,  6.61s/it]progress: 0.08641975308641975 | query: 1740062717.471225598.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.24it/s]
+[2025/03/26 22:34:25 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.43it/s][A100%|██████████| 1/1 [00:00<00:00,  6.16it/s]
+[2025/03/26 22:34:30 hloc INFO] Finished exporting features.
+[2025/03/26 22:34:30 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:34:30 hloc INFO] Found 20 pairs.
+[2025/03/26 22:34:30 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.78it/s][A
+ 50%|█████     | 10/20 [00:00<00:00, 32.89it/s][A
+ 95%|█████████▌| 19/20 [00:00<00:00, 47.96it/s][A100%|██████████| 20/20 [00:00<00:00, 42.74it/s]
+[2025/03/26 22:34:31 hloc INFO] Finished exporting matches.
+Processing queries:   9%|▊         | 77/891 [07:53<1:27:05,  6.42s/it]progress: 0.08754208754208755 | query: 1740062717.720202127.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.47it/s]
+[2025/03/26 22:34:31 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.76it/s][A100%|██████████| 1/1 [00:00<00:00,  5.74it/s]
+[2025/03/26 22:34:36 hloc INFO] Finished exporting features.
+[2025/03/26 22:34:36 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:34:36 hloc INFO] Found 20 pairs.
+[2025/03/26 22:34:36 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:01<00:21,  1.11s/it][A
+ 30%|███       | 6/20 [00:01<00:04,  3.36it/s][A
+ 80%|████████  | 16/20 [00:01<00:00,  9.06it/s][A100%|██████████| 20/20 [00:02<00:00,  9.84it/s]
+[2025/03/26 22:34:38 hloc INFO] Finished exporting matches.
+Processing queries:   9%|▉         | 78/891 [08:00<1:31:33,  6.76s/it]progress: 0.08866442199775533 | query: 1740062717.911473873.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.81it/s]
+[2025/03/26 22:34:38 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.13it/s][A100%|██████████| 1/1 [00:00<00:00,  5.89it/s]
+[2025/03/26 22:34:43 hloc INFO] Finished exporting features.
+[2025/03/26 22:34:43 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:34:44 hloc INFO] Found 20 pairs.
+[2025/03/26 22:34:44 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:05,  3.69it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 19.59it/s][A
+ 75%|███████▌  | 15/20 [00:00<00:00, 33.60it/s][A100%|██████████| 20/20 [00:00<00:00, 34.17it/s]
+[2025/03/26 22:34:44 hloc INFO] Finished exporting matches.
+Processing queries:   9%|▉         | 79/891 [08:06<1:28:39,  6.55s/it]progress: 0.08978675645342311 | query: 1740062718.115126523.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.18it/s]
+[2025/03/26 22:34:45 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.32it/s][A100%|██████████| 1/1 [00:00<00:00,  6.87it/s]
+[2025/03/26 22:34:49 hloc INFO] Finished exporting features.
+[2025/03/26 22:34:49 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:34:50 hloc INFO] Found 20 pairs.
+[2025/03/26 22:34:50 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.59it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 28.20it/s][A
+ 85%|████████▌ | 17/20 [00:00<00:00, 39.89it/s][A100%|██████████| 20/20 [00:00<00:00, 37.92it/s]
+[2025/03/26 22:34:50 hloc INFO] Finished exporting matches.
+Processing queries:   9%|▉         | 80/891 [08:13<1:26:40,  6.41s/it]progress: 0.09090909090909091 | query: 1740062718.310945994.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.94it/s]
+[2025/03/26 22:34:51 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.55it/s][A100%|██████████| 1/1 [00:00<00:00,  7.12it/s]
+[2025/03/26 22:34:55 hloc INFO] Finished exporting features.
+[2025/03/26 22:34:55 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:34:56 hloc INFO] Found 20 pairs.
+[2025/03/26 22:34:56 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.54it/s][A
+ 50%|█████     | 10/20 [00:00<00:00, 32.80it/s][A
+ 85%|████████▌ | 17/20 [00:00<00:00, 42.76it/s][A100%|██████████| 20/20 [00:00<00:00, 39.85it/s]
+[2025/03/26 22:34:56 hloc INFO] Finished exporting matches.
+Processing queries:   9%|▉         | 81/891 [08:19<1:24:50,  6.28s/it]progress: 0.0920314253647587 | query: 1740062718.486738529.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.83it/s]
+[2025/03/26 22:34:57 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.59it/s][A100%|██████████| 1/1 [00:00<00:00,  7.14it/s]
+[2025/03/26 22:35:01 hloc INFO] Finished exporting features.
+[2025/03/26 22:35:01 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:35:02 hloc INFO] Found 20 pairs.
+[2025/03/26 22:35:02 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.53it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 25.25it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.32it/s][A100%|██████████| 20/20 [00:00<00:00, 36.77it/s]
+[2025/03/26 22:35:02 hloc INFO] Finished exporting matches.
+Processing queries:   9%|▉         | 82/891 [08:25<1:23:31,  6.19s/it]progress: 0.0931537598204265 | query: 1740062718.686272382.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.06it/s]
+[2025/03/26 22:35:03 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.25it/s][A100%|██████████| 1/1 [00:00<00:00,  6.85it/s]
+[2025/03/26 22:35:07 hloc INFO] Finished exporting features.
+[2025/03/26 22:35:07 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:35:08 hloc INFO] Found 20 pairs.
+[2025/03/26 22:35:08 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:07,  2.66it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 15.64it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 24.47it/s][A
+100%|██████████| 20/20 [00:00<00:00, 32.54it/s][A100%|██████████| 20/20 [00:00<00:00, 28.11it/s]
+[2025/03/26 22:35:09 hloc INFO] Finished exporting matches.
+Processing queries:   9%|▉         | 83/891 [08:31<1:23:26,  6.20s/it]progress: 0.09427609427609428 | query: 1740062718.897499852.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.61it/s]
+[2025/03/26 22:35:09 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.20it/s][A100%|██████████| 1/1 [00:00<00:00,  6.76it/s]
+[2025/03/26 22:35:14 hloc INFO] Finished exporting features.
+[2025/03/26 22:35:14 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:35:14 hloc INFO] Found 20 pairs.
+[2025/03/26 22:35:14 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.52it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.66it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.92it/s][A
+100%|██████████| 20/20 [00:00<00:00, 39.32it/s][A100%|██████████| 20/20 [00:00<00:00, 34.63it/s]
+[2025/03/26 22:35:15 hloc INFO] Finished exporting matches.
+Processing queries:   9%|▉         | 84/891 [08:37<1:22:44,  6.15s/it]progress: 0.09539842873176206 | query: 1740062719.126476025.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.93it/s]
+[2025/03/26 22:35:15 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.12it/s][A100%|██████████| 1/1 [00:00<00:00,  6.72it/s]
+[2025/03/26 22:35:20 hloc INFO] Finished exporting features.
+[2025/03/26 22:35:20 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:35:20 hloc INFO] Found 20 pairs.
+[2025/03/26 22:35:20 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.30it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.31it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 28.29it/s][A
+ 95%|█████████▌| 19/20 [00:00<00:00, 36.31it/s][A100%|██████████| 20/20 [00:00<00:00, 32.87it/s]
+[2025/03/26 22:35:21 hloc INFO] Finished exporting matches.
+Processing queries:  10%|▉         | 85/891 [08:43<1:22:23,  6.13s/it]progress: 0.09652076318742986 | query: 1740062719.321517468.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.89it/s]
+[2025/03/26 22:35:21 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.57it/s][A100%|██████████| 1/1 [00:00<00:00,  7.06it/s]
+[2025/03/26 22:35:26 hloc INFO] Finished exporting features.
+[2025/03/26 22:35:26 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:35:26 hloc INFO] Found 20 pairs.
+[2025/03/26 22:35:26 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  3.95it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 17.30it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 26.85it/s][A
+ 90%|█████████ | 18/20 [00:00<00:00, 33.51it/s][A100%|██████████| 20/20 [00:00<00:00, 30.97it/s]
+[2025/03/26 22:35:27 hloc INFO] Finished exporting matches.
+Processing queries:  10%|▉         | 86/891 [08:49<1:22:09,  6.12s/it]progress: 0.09764309764309764 | query: 1740062719.514906723.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.83it/s]
+[2025/03/26 22:35:27 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.54it/s][A100%|██████████| 1/1 [00:00<00:00,  7.08it/s]
+[2025/03/26 22:35:32 hloc INFO] Finished exporting features.
+[2025/03/26 22:35:32 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:35:32 hloc INFO] Found 20 pairs.
+[2025/03/26 22:35:32 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.70it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.28it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.34it/s][A
+100%|██████████| 20/20 [00:00<00:00, 38.77it/s][A100%|██████████| 20/20 [00:00<00:00, 34.36it/s]
+[2025/03/26 22:35:33 hloc INFO] Finished exporting matches.
+Processing queries:  10%|▉         | 87/891 [08:55<1:21:47,  6.10s/it]progress: 0.09876543209876543 | query: 1740062719.730177888.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.38it/s]
+[2025/03/26 22:35:33 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.76it/s][A100%|██████████| 1/1 [00:00<00:00,  6.52it/s]
+[2025/03/26 22:35:38 hloc INFO] Finished exporting features.
+[2025/03/26 22:35:38 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:35:38 hloc INFO] Found 20 pairs.
+[2025/03/26 22:35:38 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.40it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.50it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.59it/s][A
+100%|██████████| 20/20 [00:00<00:00, 39.09it/s][A100%|██████████| 20/20 [00:00<00:00, 34.54it/s]
+[2025/03/26 22:35:39 hloc INFO] Finished exporting matches.
+Processing queries:  10%|▉         | 88/891 [09:01<1:21:27,  6.09s/it]progress: 0.09988776655443322 | query: 1740062719.902528848.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.44it/s]
+[2025/03/26 22:35:39 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.32it/s][A100%|██████████| 1/1 [00:00<00:00,  6.17it/s]
+[2025/03/26 22:35:44 hloc INFO] Finished exporting features.
+[2025/03/26 22:35:44 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:35:44 hloc INFO] Found 20 pairs.
+[2025/03/26 22:35:44 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.24it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 23.87it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 31.92it/s][A100%|██████████| 20/20 [00:00<00:00, 34.31it/s]
+[2025/03/26 22:35:45 hloc INFO] Finished exporting matches.
+Processing queries:  10%|▉         | 89/891 [09:07<1:21:19,  6.08s/it]progress: 0.10101010101010101 | query: 1740062720.109260759.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.08it/s]
+[2025/03/26 22:35:45 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.65it/s][A100%|██████████| 1/1 [00:00<00:00,  5.69it/s]
+[2025/03/26 22:35:50 hloc INFO] Finished exporting features.
+[2025/03/26 22:35:50 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:35:50 hloc INFO] Found 20 pairs.
+[2025/03/26 22:35:50 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.58it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.28it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 32.12it/s][A100%|██████████| 20/20 [00:00<00:00, 36.30it/s]
+[2025/03/26 22:35:51 hloc INFO] Finished exporting matches.
+Processing queries:  10%|█         | 90/891 [09:13<1:21:07,  6.08s/it]progress: 0.10213243546576879 | query: 1740062720.327297542.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.34it/s]
+[2025/03/26 22:35:51 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.16it/s][A100%|██████████| 1/1 [00:00<00:00,  6.80it/s]
+[2025/03/26 22:35:56 hloc INFO] Finished exporting features.
+[2025/03/26 22:35:56 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:35:56 hloc INFO] Found 20 pairs.
+[2025/03/26 22:35:56 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:05,  3.75it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 19.68it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 26.82it/s][A
+ 95%|█████████▌| 19/20 [00:00<00:00, 35.83it/s][A100%|██████████| 20/20 [00:00<00:00, 32.11it/s]
+[2025/03/26 22:35:57 hloc INFO] Finished exporting matches.
+Processing queries:  10%|█         | 91/891 [09:19<1:21:05,  6.08s/it]progress: 0.10325476992143659 | query: 1740062720.524492452.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.08it/s]
+[2025/03/26 22:35:57 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.87it/s][A100%|██████████| 1/1 [00:00<00:00,  7.33it/s]
+[2025/03/26 22:36:02 hloc INFO] Finished exporting features.
+[2025/03/26 22:36:02 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:36:03 hloc INFO] Found 20 pairs.
+[2025/03/26 22:36:03 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:06,  2.87it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 20.97it/s][A
+ 80%|████████  | 16/20 [00:00<00:00, 25.10it/s][A
+100%|██████████| 20/20 [00:00<00:00, 21.52it/s][A100%|██████████| 20/20 [00:00<00:00, 20.44it/s]
+[2025/03/26 22:36:04 hloc INFO] Finished exporting matches.
+Processing queries:  10%|█         | 92/891 [09:26<1:22:33,  6.20s/it]progress: 0.10437710437710437 | query: 1740062720.722713013.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.48it/s]
+[2025/03/26 22:36:04 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.54it/s][A100%|██████████| 1/1 [00:00<00:00,  6.89it/s]
+[2025/03/26 22:36:09 hloc INFO] Finished exporting features.
+[2025/03/26 22:36:09 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:36:09 hloc INFO] Found 20 pairs.
+[2025/03/26 22:36:09 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:05,  3.44it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 20.83it/s][A
+ 90%|█████████ | 18/20 [00:00<00:00, 38.43it/s][A100%|██████████| 20/20 [00:00<00:00, 35.51it/s]
+[2025/03/26 22:36:10 hloc INFO] Finished exporting matches.
+Processing queries:  10%|█         | 93/891 [09:32<1:21:51,  6.15s/it]progress: 0.10549943883277217 | query: 1740062720.919891592.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.41it/s]
+[2025/03/26 22:36:10 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.36it/s][A100%|██████████| 1/1 [00:00<00:00,  6.60it/s]
+[2025/03/26 22:36:15 hloc INFO] Finished exporting features.
+[2025/03/26 22:36:15 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:36:15 hloc INFO] Found 20 pairs.
+[2025/03/26 22:36:15 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.56it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 17.07it/s][A
+ 55%|█████▌    | 11/20 [00:00<00:00, 21.13it/s][A
+ 80%|████████  | 16/20 [00:00<00:00, 26.04it/s][A100%|██████████| 20/20 [00:00<00:00, 26.99it/s]
+[2025/03/26 22:36:16 hloc INFO] Finished exporting matches.
+Processing queries:  11%|█         | 94/891 [09:38<1:22:06,  6.18s/it]progress: 0.10662177328843996 | query: 1740062721.127054464.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.87it/s]
+[2025/03/26 22:36:16 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.37it/s][A100%|██████████| 1/1 [00:00<00:00,  6.95it/s]
+[2025/03/26 22:36:21 hloc INFO] Finished exporting features.
+[2025/03/26 22:36:21 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:36:21 hloc INFO] Found 20 pairs.
+[2025/03/26 22:36:21 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.49it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.32it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 29.77it/s][A100%|██████████| 20/20 [00:00<00:00, 36.23it/s]
+[2025/03/26 22:36:22 hloc INFO] Finished exporting matches.
+Processing queries:  11%|█         | 95/891 [09:44<1:21:27,  6.14s/it]progress: 0.10774410774410774 | query: 1740062721.327777070.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.89it/s]
+[2025/03/26 22:36:22 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.38it/s][A100%|██████████| 1/1 [00:00<00:00,  6.75it/s]
+[2025/03/26 22:36:27 hloc INFO] Finished exporting features.
+[2025/03/26 22:36:27 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:36:27 hloc INFO] Found 20 pairs.
+[2025/03/26 22:36:27 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.41it/s][A
+ 25%|██▌       | 5/20 [00:00<00:02,  5.76it/s][A
+ 55%|█████▌    | 11/20 [00:00<00:00, 11.82it/s][A
+ 90%|█████████ | 18/20 [00:01<00:00, 18.24it/s][A100%|██████████| 20/20 [00:01<00:00, 17.37it/s]
+[2025/03/26 22:36:29 hloc INFO] Finished exporting matches.
+Processing queries:  11%|█         | 96/891 [09:51<1:23:26,  6.30s/it]progress: 0.10886644219977554 | query: 1740062721.520710149.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.01it/s]
+[2025/03/26 22:36:29 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.62it/s][A100%|██████████| 1/1 [00:00<00:00,  6.77it/s]
+[2025/03/26 22:36:34 hloc INFO] Finished exporting features.
+[2025/03/26 22:36:34 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:36:34 hloc INFO] Found 20 pairs.
+[2025/03/26 22:36:34 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:17,  1.06it/s][A
+ 35%|███▌      | 7/20 [00:01<00:01,  7.21it/s][A
+ 55%|█████▌    | 11/20 [00:02<00:01,  5.63it/s][A
+ 90%|█████████ | 18/20 [00:02<00:00,  9.27it/s][A100%|██████████| 20/20 [00:02<00:00,  9.19it/s]
+[2025/03/26 22:36:37 hloc INFO] Finished exporting matches.
+Processing queries:  11%|█         | 97/891 [09:59<1:32:12,  6.97s/it]progress: 0.10998877665544332 | query: 1740062721.730222474.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.29it/s]
+[2025/03/26 22:36:37 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.80it/s][A100%|██████████| 1/1 [00:00<00:00,  7.14it/s]
+[2025/03/26 22:36:42 hloc INFO] Finished exporting features.
+[2025/03/26 22:36:42 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:36:43 hloc INFO] Found 20 pairs.
+[2025/03/26 22:36:43 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.78it/s][A
+ 15%|█▌        | 3/20 [00:02<00:13,  1.30it/s][A
+ 45%|████▌     | 9/20 [00:02<00:02,  4.07it/s][A
+ 80%|████████  | 16/20 [00:04<00:01,  3.85it/s][A100%|██████████| 20/20 [00:04<00:00,  4.57it/s]
+[2025/03/26 22:36:47 hloc INFO] Finished exporting matches.
+Processing queries:  11%|█         | 98/891 [10:09<1:43:37,  7.84s/it]progress: 0.1111111111111111 | query: 1740062721.918266803.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.02it/s]
+[2025/03/26 22:36:47 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.76it/s][A100%|██████████| 1/1 [00:00<00:00,  7.21it/s]
+[2025/03/26 22:36:52 hloc INFO] Finished exporting features.
+[2025/03/26 22:36:52 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:36:52 hloc INFO] Found 20 pairs.
+[2025/03/26 22:36:52 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:05,  3.32it/s][A
+ 30%|███       | 6/20 [00:01<00:02,  5.61it/s][A
+ 60%|██████    | 12/20 [00:01<00:00, 10.75it/s][A
+ 90%|█████████ | 18/20 [00:01<00:00, 15.37it/s][A100%|██████████| 20/20 [00:01<00:00, 14.80it/s]
+[2025/03/26 22:36:54 hloc INFO] Finished exporting matches.
+Processing queries:  11%|█         | 99/891 [10:16<1:39:28,  7.54s/it]progress: 0.1122334455667789 | query: 1740062722.129644551.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.07it/s]
+[2025/03/26 22:36:54 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.44it/s][A100%|██████████| 1/1 [00:00<00:00,  6.77it/s]
+[2025/03/26 22:36:59 hloc INFO] Finished exporting features.
+[2025/03/26 22:36:59 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:36:59 hloc INFO] Found 20 pairs.
+[2025/03/26 22:36:59 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.32it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 18.97it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 12.98it/s][A
+ 75%|███████▌  | 15/20 [00:01<00:00, 13.39it/s][A100%|██████████| 20/20 [00:01<00:00, 16.26it/s]
+[2025/03/26 22:37:01 hloc INFO] Finished exporting matches.
+Processing queries:  11%|█         | 100/891 [10:23<1:36:07,  7.29s/it]progress: 0.11335578002244669 | query: 1740062722.323878211.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  3.32it/s][A100%|██████████| 1/1 [00:00<00:00,  3.06it/s]
+[2025/03/26 22:37:01 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  1.20it/s][A100%|██████████| 1/1 [00:00<00:00,  1.16it/s]
+[2025/03/26 22:37:07 hloc INFO] Finished exporting features.
+[2025/03/26 22:37:07 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:37:07 hloc INFO] Found 20 pairs.
+[2025/03/26 22:37:07 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.68it/s][A
+ 15%|█▌        | 3/20 [00:00<00:02,  6.93it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 15.87it/s][A
+ 65%|██████▌   | 13/20 [00:01<00:00,  8.60it/s][A
+ 75%|███████▌  | 15/20 [00:02<00:00,  6.45it/s][A100%|██████████| 20/20 [00:02<00:00,  8.61it/s]
+[2025/03/26 22:37:10 hloc INFO] Finished exporting matches.
+Processing queries:  11%|█▏        | 101/891 [10:32<1:43:25,  7.86s/it]progress: 0.11447811447811448 | query: 1740062722.532045583.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:01<00:00,  1.19s/it][A100%|██████████| 1/1 [00:01<00:00,  1.22s/it]
+[2025/03/26 22:37:11 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.86it/s][A100%|██████████| 1/1 [00:00<00:00,  6.44it/s]
+[2025/03/26 22:37:16 hloc INFO] Finished exporting features.
+[2025/03/26 22:37:16 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:37:16 hloc INFO] Found 20 pairs.
+[2025/03/26 22:37:16 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.59it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.36it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 31.66it/s][A
+100%|██████████| 20/20 [00:00<00:00, 39.80it/s][A100%|██████████| 20/20 [00:00<00:00, 35.06it/s]
+[2025/03/26 22:37:17 hloc INFO] Finished exporting matches.
+Processing queries:  11%|█▏        | 102/891 [10:39<1:41:12,  7.70s/it]progress: 0.11560044893378227 | query: 1740062722.722918155.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.06it/s]
+[2025/03/26 22:37:17 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.64it/s][A100%|██████████| 1/1 [00:00<00:00,  7.15it/s]
+[2025/03/26 22:37:22 hloc INFO] Finished exporting features.
+[2025/03/26 22:37:22 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:37:23 hloc INFO] Found 20 pairs.
+[2025/03/26 22:37:23 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.65it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.61it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 30.07it/s][A
+ 95%|█████████▌| 19/20 [00:00<00:00, 38.60it/s][A100%|██████████| 20/20 [00:00<00:00, 35.17it/s]
+[2025/03/26 22:37:23 hloc INFO] Finished exporting matches.
+Processing queries:  12%|█▏        | 103/891 [10:45<1:34:48,  7.22s/it]progress: 0.11672278338945005 | query: 1740062722.927663550.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  2.40it/s][A100%|██████████| 1/1 [00:00<00:00,  2.27it/s]
+[2025/03/26 22:37:24 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.37it/s][A100%|██████████| 1/1 [00:00<00:00,  6.96it/s]
+[2025/03/26 22:37:29 hloc INFO] Finished exporting features.
+[2025/03/26 22:37:29 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:37:29 hloc INFO] Found 20 pairs.
+[2025/03/26 22:37:29 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.48it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.85it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.56it/s][A100%|██████████| 20/20 [00:00<00:00, 35.85it/s]
+[2025/03/26 22:37:30 hloc INFO] Finished exporting matches.
+Processing queries:  12%|█▏        | 104/891 [10:52<1:31:22,  6.97s/it]progress: 0.11784511784511785 | query: 1740062723.124515692.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  4.49it/s][A100%|██████████| 1/1 [00:00<00:00,  3.93it/s]
+[2025/03/26 22:37:30 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.17it/s][A100%|██████████| 1/1 [00:00<00:00,  6.72it/s]
+[2025/03/26 22:37:35 hloc INFO] Finished exporting features.
+[2025/03/26 22:37:35 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:37:35 hloc INFO] Found 20 pairs.
+[2025/03/26 22:37:35 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.41it/s][A
+ 25%|██▌       | 5/20 [00:00<00:00, 15.99it/s][A
+ 55%|█████▌    | 11/20 [00:00<00:00, 12.34it/s][A
+ 80%|████████  | 16/20 [00:01<00:00, 16.04it/s][A100%|██████████| 20/20 [00:01<00:00, 17.81it/s]
+[2025/03/26 22:37:36 hloc INFO] Finished exporting matches.
+Processing queries:  12%|█▏        | 105/891 [10:58<1:30:29,  6.91s/it]progress: 0.11896745230078563 | query: 1740062723.326820383.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.67it/s][A100%|██████████| 1/1 [00:00<00:00,  5.40it/s]
+[2025/03/26 22:37:37 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.57it/s][A100%|██████████| 1/1 [00:00<00:00,  7.03it/s]
+[2025/03/26 22:37:41 hloc INFO] Finished exporting features.
+[2025/03/26 22:37:41 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:37:42 hloc INFO] Found 20 pairs.
+[2025/03/26 22:37:42 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.53it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 22.55it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 34.21it/s][A
+100%|██████████| 20/20 [00:00<00:00, 39.11it/s][A100%|██████████| 20/20 [00:00<00:00, 34.73it/s]
+[2025/03/26 22:37:43 hloc INFO] Finished exporting matches.
+Processing queries:  12%|█▏        | 106/891 [11:05<1:27:30,  6.69s/it]progress: 0.12008978675645342 | query: 1740062723.529002216.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  2.85it/s][A100%|██████████| 1/1 [00:00<00:00,  2.65it/s]
+[2025/03/26 22:37:43 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.23it/s][A100%|██████████| 1/1 [00:00<00:00,  5.93it/s]
+[2025/03/26 22:37:48 hloc INFO] Finished exporting features.
+[2025/03/26 22:37:48 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:37:48 hloc INFO] Found 20 pairs.
+[2025/03/26 22:37:48 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.23it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 23.95it/s][A
+ 75%|███████▌  | 15/20 [00:00<00:00, 35.29it/s][A100%|██████████| 20/20 [00:00<00:00, 36.02it/s]
+[2025/03/26 22:37:49 hloc INFO] Finished exporting matches.
+Processing queries:  12%|█▏        | 107/891 [11:11<1:26:05,  6.59s/it]progress: 0.12121212121212122 | query: 1740062723.726791603.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00, 10.28it/s]
+[2025/03/26 22:37:49 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.46it/s][A100%|██████████| 1/1 [00:00<00:00,  7.02it/s]
+[2025/03/26 22:37:54 hloc INFO] Finished exporting features.
+[2025/03/26 22:37:54 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:37:54 hloc INFO] Found 20 pairs.
+[2025/03/26 22:37:54 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  5.05it/s][A
+ 10%|█         | 2/20 [00:00<00:03,  4.95it/s][A
+ 45%|████▌     | 9/20 [00:00<00:00, 16.81it/s][A
+ 80%|████████  | 16/20 [00:00<00:00, 25.98it/s][A100%|██████████| 20/20 [00:00<00:00, 26.16it/s]
+[2025/03/26 22:37:55 hloc INFO] Finished exporting matches.
+Processing queries:  12%|█▏        | 108/891 [11:17<1:24:48,  6.50s/it]progress: 0.122334455667789 | query: 1740062723.934360802.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  4.36it/s][A100%|██████████| 1/1 [00:00<00:00,  3.87it/s]
+[2025/03/26 22:37:56 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.18it/s][A100%|██████████| 1/1 [00:00<00:00,  6.64it/s]
+[2025/03/26 22:38:00 hloc INFO] Finished exporting features.
+[2025/03/26 22:38:00 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:38:01 hloc INFO] Found 20 pairs.
+[2025/03/26 22:38:01 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:08,  2.28it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 13.78it/s][A
+ 70%|███████   | 14/20 [00:00<00:00, 23.61it/s][A100%|██████████| 20/20 [00:00<00:00, 25.63it/s]
+[2025/03/26 22:38:02 hloc INFO] Finished exporting matches.
+Processing queries:  12%|█▏        | 109/891 [11:24<1:24:41,  6.50s/it]progress: 0.12345679012345678 | query: 1740062724.131537328.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  4.38it/s][A100%|██████████| 1/1 [00:00<00:00,  3.96it/s]
+[2025/03/26 22:38:02 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.49it/s][A100%|██████████| 1/1 [00:00<00:00,  6.98it/s]
+[2025/03/26 22:38:07 hloc INFO] Finished exporting features.
+[2025/03/26 22:38:07 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:38:07 hloc INFO] Found 20 pairs.
+[2025/03/26 22:38:07 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:05,  3.28it/s][A
+ 30%|███       | 6/20 [00:00<00:01, 13.23it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 22.52it/s][A
+ 95%|█████████▌| 19/20 [00:00<00:00, 30.64it/s][A100%|██████████| 20/20 [00:00<00:00, 27.42it/s]
+[2025/03/26 22:38:08 hloc INFO] Finished exporting matches.
+Processing queries:  12%|█▏        | 110/891 [11:30<1:24:14,  6.47s/it]progress: 0.12457912457912458 | query: 1740062724.327941346.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.90it/s][A100%|██████████| 1/1 [00:00<00:00,  6.63it/s]
+[2025/03/26 22:38:08 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.52it/s][A100%|██████████| 1/1 [00:00<00:00,  6.94it/s]
+[2025/03/26 22:38:13 hloc INFO] Finished exporting features.
+[2025/03/26 22:38:13 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:38:14 hloc INFO] Found 20 pairs.
+[2025/03/26 22:38:14 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.36it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.18it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 29.61it/s][A
+ 80%|████████  | 16/20 [00:00<00:00, 23.70it/s][A100%|██████████| 20/20 [00:00<00:00, 25.93it/s]
+[2025/03/26 22:38:14 hloc INFO] Finished exporting matches.
+Processing queries:  12%|█▏        | 111/891 [11:37<1:23:39,  6.44s/it]progress: 0.12570145903479238 | query: 1740062724.533821663.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  4.31it/s][A100%|██████████| 1/1 [00:00<00:00,  3.88it/s]
+[2025/03/26 22:38:15 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.10it/s][A100%|██████████| 1/1 [00:00<00:00,  6.74it/s]
+[2025/03/26 22:38:20 hloc INFO] Finished exporting features.
+[2025/03/26 22:38:20 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:38:20 hloc INFO] Found 20 pairs.
+[2025/03/26 22:38:20 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:07,  2.44it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 14.73it/s][A
+ 55%|█████▌    | 11/20 [00:01<00:01,  7.62it/s][A
+ 95%|█████████▌| 19/20 [00:01<00:00, 13.06it/s][A100%|██████████| 20/20 [00:01<00:00, 12.64it/s]
+[2025/03/26 22:38:22 hloc INFO] Finished exporting matches.
+Processing queries:  13%|█▎        | 112/891 [11:44<1:26:48,  6.69s/it]progress: 0.12682379349046016 | query: 1740062724.737419551.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  3.91it/s][A100%|██████████| 1/1 [00:00<00:00,  3.49it/s]
+[2025/03/26 22:38:22 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.19it/s][A100%|██████████| 1/1 [00:00<00:00,  6.71it/s]
+[2025/03/26 22:38:27 hloc INFO] Finished exporting features.
+[2025/03/26 22:38:27 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:38:27 hloc INFO] Found 20 pairs.
+[2025/03/26 22:38:27 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  5.27it/s][A
+ 10%|█         | 2/20 [00:00<00:05,  3.23it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 12.09it/s][A
+ 75%|███████▌  | 15/20 [00:00<00:00, 20.47it/s][A100%|██████████| 20/20 [00:00<00:00, 21.55it/s]
+[2025/03/26 22:38:28 hloc INFO] Finished exporting matches.
+Processing queries:  13%|█▎        | 113/891 [11:50<1:26:30,  6.67s/it]progress: 0.12794612794612795 | query: 1740062724.933943482.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.75it/s][A100%|██████████| 1/1 [00:00<00:00,  6.52it/s]
+[2025/03/26 22:38:29 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.14it/s][A100%|██████████| 1/1 [00:00<00:00,  6.70it/s]
+[2025/03/26 22:38:33 hloc INFO] Finished exporting features.
+[2025/03/26 22:38:33 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:38:34 hloc INFO] Found 20 pairs.
+[2025/03/26 22:38:34 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.62it/s][A
+ 10%|█         | 2/20 [00:00<00:03,  4.62it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 16.02it/s][A
+ 80%|████████  | 16/20 [00:00<00:00, 27.55it/s][A100%|██████████| 20/20 [00:00<00:00, 26.62it/s]
+[2025/03/26 22:38:35 hloc INFO] Finished exporting matches.
+Processing queries:  13%|█▎        | 114/891 [11:57<1:25:06,  6.57s/it]progress: 0.12906846240179573 | query: 1740062725.136583015.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  5.74it/s][A100%|██████████| 1/1 [00:00<00:00,  5.01it/s]
+[2025/03/26 22:38:35 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.17it/s][A100%|██████████| 1/1 [00:00<00:00,  6.79it/s]
+[2025/03/26 22:38:40 hloc INFO] Finished exporting features.
+[2025/03/26 22:38:40 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:38:40 hloc INFO] Found 20 pairs.
+[2025/03/26 22:38:40 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.14it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 18.56it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 23.66it/s][A
+100%|██████████| 20/20 [00:00<00:00, 33.48it/s][A100%|██████████| 20/20 [00:00<00:00, 29.67it/s]
+[2025/03/26 22:38:41 hloc INFO] Finished exporting matches.
+Processing queries:  13%|█▎        | 115/891 [12:03<1:24:00,  6.49s/it]progress: 0.13019079685746351 | query: 1740062725.343601760.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  6.62it/s][A100%|██████████| 1/1 [00:00<00:00,  5.69it/s]
+[2025/03/26 22:38:41 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.98it/s][A100%|██████████| 1/1 [00:00<00:00,  6.71it/s]
+[2025/03/26 22:38:46 hloc INFO] Finished exporting features.
+[2025/03/26 22:38:46 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:38:46 hloc INFO] Found 20 pairs.
+[2025/03/26 22:38:46 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:03,  4.80it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 23.66it/s][A
+ 55%|█████▌    | 11/20 [00:00<00:00, 23.89it/s][A
+ 80%|████████  | 16/20 [00:00<00:00, 25.13it/s][A100%|██████████| 20/20 [00:00<00:00, 26.90it/s]
+[2025/03/26 22:38:47 hloc INFO] Finished exporting matches.
+Processing queries:  13%|█▎        | 116/891 [12:09<1:23:08,  6.44s/it]progress: 0.13131313131313133 | query: 1740062725.538152870.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  5.18it/s][A100%|██████████| 1/1 [00:00<00:00,  4.60it/s]
+[2025/03/26 22:38:48 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.20it/s][A100%|██████████| 1/1 [00:00<00:00,  6.84it/s]
+[2025/03/26 22:38:52 hloc INFO] Finished exporting features.
+[2025/03/26 22:38:52 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:38:53 hloc INFO] Found 20 pairs.
+[2025/03/26 22:38:53 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.08it/s][A
+ 40%|████      | 8/20 [00:00<00:00, 19.52it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 22.33it/s][A
+100%|██████████| 20/20 [00:00<00:00, 30.10it/s][A100%|██████████| 20/20 [00:00<00:00, 26.98it/s]
+[2025/03/26 22:38:54 hloc INFO] Finished exporting matches.
+Processing queries:  13%|█▎        | 117/891 [12:16<1:22:33,  6.40s/it]progress: 0.1324354657687991 | query: 1740062725.748429499.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  7.12it/s][A100%|██████████| 1/1 [00:00<00:00,  6.08it/s]
+[2025/03/26 22:38:54 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.16it/s][A100%|██████████| 1/1 [00:00<00:00,  6.73it/s]
+[2025/03/26 22:38:59 hloc INFO] Finished exporting features.
+[2025/03/26 22:38:59 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:38:59 hloc INFO] Found 20 pairs.
+[2025/03/26 22:38:59 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.67it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 19.91it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 32.26it/s][A
+ 85%|████████▌ | 17/20 [00:00<00:00, 32.71it/s][A100%|██████████| 20/20 [00:00<00:00, 32.23it/s]
+[2025/03/26 22:39:00 hloc INFO] Finished exporting matches.
+Processing queries:  13%|█▎        | 118/891 [12:22<1:21:31,  6.33s/it]progress: 0.1335578002244669 | query: 1740062725.948517933.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  9.95it/s]
+[2025/03/26 22:39:00 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.03it/s][A100%|██████████| 1/1 [00:00<00:00,  6.70it/s]
+[2025/03/26 22:39:05 hloc INFO] Finished exporting features.
+[2025/03/26 22:39:05 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:39:05 hloc INFO] Found 20 pairs.
+[2025/03/26 22:39:05 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.54it/s][A
+ 30%|███       | 6/20 [00:00<00:00, 18.85it/s][A
+ 60%|██████    | 12/20 [00:00<00:00, 29.03it/s][A
+ 90%|█████████ | 18/20 [00:00<00:00, 35.81it/s][A100%|██████████| 20/20 [00:00<00:00, 33.03it/s]
+[2025/03/26 22:39:06 hloc INFO] Finished exporting matches.
+Processing queries:  13%|█▎        | 119/891 [12:28<1:20:26,  6.25s/it]progress: 0.13468013468013468 | query: 1740062726.154530335.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.63it/s]
+[2025/03/26 22:39:06 hloc INFO] Finished exporting features.
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+100%|██████████| 1/1 [00:00<00:00,  8.24it/s][A100%|██████████| 1/1 [00:00<00:00,  6.84it/s]
+[2025/03/26 22:39:11 hloc INFO] Finished exporting features.
+[2025/03/26 22:39:11 hloc INFO] Extracting image pairs from a retrieval database.
+[2025/03/26 22:39:11 hloc INFO] Found 20 pairs.
+[2025/03/26 22:39:11 hloc INFO] Matching local features with configuration:
+{'device': 'cuda',
+ 'model': {'features': 'superpoint', 'name': 'lightglue'},
+ 'output': 'matches-superpoint-lightglue'}
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:00<00:04,  4.53it/s][A
+ 35%|███▌      | 7/20 [00:00<00:00, 21.93it/s][A
+ 65%|██████▌   | 13/20 [00:00<00:00, 30.89it/s][A
+100%|██████████| 20/20 [00:00<00:00, 38.67it/s][A100%|██████████| 20/20 [00:00<00:00, 34.13it/s]
+[2025/03/26 22:39:12 hloc INFO] Finished exporting matches.
+Processing queries:  13%|█▎        | 120/891 [12:34<1:19:43,  6.20s/it]progress: 0.13580246913580246 | query: 1740062726.347653216.jpg
+Loaded SuperPoint model
+
+  0%|          | 0/1 [00:00<?, ?it/s][A100%|██████████| 1/1 [00:00<00:00,  8.79it/s]
+[2025/03/26 22:39:12 hloc INFO] Finished exporting features.

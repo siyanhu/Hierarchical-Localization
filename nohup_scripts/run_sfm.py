@@ -63,7 +63,7 @@ def main():
     outputs_dir = Path("/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb5/hloc_2025")
     outputs_dir.mkdir(parents=True, exist_ok=True)
 
-    sfm_dir          = outputs_dir / "sfm"
+    sfm_dir  = outputs_dir / "sfm"
     sfm_dir.mkdir(parents=True, exist_ok=True)
 
     # # List of image subfolders or sequences
