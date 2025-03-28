@@ -1,181 +1,193 @@
 import os
 import json
 import math
-import numpy as np
+import statistics
 
 
-def quaternion_to_euler_angle(w, x, y, z):
+def quaternion_to_angle_degrees(q_ref, q_test):
     """
-    Convert a quaternion to Euler angles (roll, pitch, yaw) in degrees.
-    
-    Returns (roll, pitch, yaw) in degrees.
+    Compute the *magnitude* of angular difference (in degrees) between two quaternions
+    q_ref and q_test. Both q_ref and q_test are [x, y, z, w] floats.
+
+    Steps:
+      1) Normalize each quaternion (q_ref, q_test).
+      2) dot = dot(q_ref, q_test) (clamped to [-1,1]) => dot = cos(angle/2).
+      3) angle = 2 * arccos(dot).    (radians)
+      4) angle_deg = angle in degrees.  -> [0..360]
+      5) If angle_deg > 180, interpret angle as (360 - angle_deg), so the final
+         difference is always in [0..180].
     """
-    # roll (x-axis rotation)
-    sinr_cosp = 2.0 * (w * x + y * z)
-    cosr_cosp = 1.0 - 2.0 * (x * x + y * y)
-    roll = math.atan2(sinr_cosp, cosr_cosp)
 
-    # pitch (y-axis rotation)
-    sinp = 2.0 * (w * y - z * x)
-    if abs(sinp) >= 1:
-        pitch = math.copysign(math.pi / 2, sinp)
-    else:
-        pitch = math.asin(sinp)
+    def normalize_quat(q):
+        length = math.sqrt(sum(a*a for a in q))
+        if length == 0:
+            # fallback if zero-length
+            return [0, 0, 0, 1]
+        return [a / length for a in q]
 
-    # yaw (z-axis rotation)
-    siny_cosp = 2.0 * (w * z + x * y)
-    cosy_cosp = 1.0 - 2.0 * (y * y + z * z)
-    yaw = math.atan2(siny_cosp, cosy_cosp)
+    qr = normalize_quat(q_ref)
+    qt = normalize_quat(q_test)
 
-    # Convert from radians to degrees
-    roll_deg = math.degrees(roll)
-    pitch_deg = math.degrees(pitch)
-    yaw_deg = math.degrees(yaw)
+    dot_val = sum(a * b for a, b in zip(qr, qt))
+    dot_val = max(-1.0, min(1.0, dot_val))  # clamp
 
-    return (roll_deg, pitch_deg, yaw_deg)
+    angle_rad = 2.0 * math.acos(dot_val)
+    angle_deg = math.degrees(angle_rad)
 
-def quaternion_diff_angles(q_ref, q_target):
+    # reduce angle > 180 to 360 - angle
+    if angle_deg > 180.0:
+        angle_deg = 360.0 - angle_deg
+
+    return angle_deg
+
+
+def translation_distance(t_ref, t_test):
     """
-    Compute angle differences (in degrees) between two quaternions:
-    - q_ref is the reference quaternion (w, x, y, z)
-    - q_target is the quaternion to compare
-    
-    Returns a dict with roll/pitch/yaw differences (absolute).
+    Euclidean distance between two translations [x, y, z].
     """
-    # Convert each to Euler angles
-    (r1, p1, y1) = quaternion_to_euler_angle(q_ref[0], q_ref[1], q_ref[2], q_ref[3])
-    (r2, p2, y2) = quaternion_to_euler_angle(q_target[0], q_target[1], q_target[2], q_target[3])
+    dx = t_test[0] - t_ref[0]
+    dy = t_test[1] - t_ref[1]
+    dz = t_test[2] - t_ref[2]
+    return math.sqrt(dx * dx + dy * dy + dz * dz)
 
-    return {
-        "roll_diff_deg":  abs(r1 - r2),
-        "pitch_diff_deg": abs(p1 - p2),
-        "yaw_diff_deg":   abs(y1 - y2)
-    }
 
-def translation_distance(t_ref, t_target):
-    """
-    Euclidean distance between two 3D translation vectors [x, y, z].
-    """
-    diff = np.array(t_ref) - np.array(t_target)
-    return float(np.linalg.norm(diff))
+# -----------
+# MAIN
+# -----------
 
-def compute_statistics(values):
-    """
-    Compute min, max, mean, 25th, 50th (median), and 75th percentile for a list of numeric values.
-    Returns a dictionary with those statistics.
-    """
-    arr = np.array(values)
-    if arr.size == 0:
-        return {
-            "min": 0.0,
-            "max": 0.0,
-            "mean": 0.0,
-            "quartiles": {
-                "q1": 0.0,
-                "median": 0.0,
-                "q3": 0.0
-            }
-        }
-    return {
-        "min": float(np.min(arr)),
-        "max": float(np.max(arr)),
-        "mean": float(np.mean(arr)),
-        "quartiles": {
-            "q1": float(np.percentile(arr, 25)),
-            "median": float(np.percentile(arr, 50)),
-            "q3": float(np.percentile(arr, 75))
-        }
-    }
+def main(ref_path, inp_path, details_out, stats_out):
+    with open(ref_path, 'r') as f:
+        ref_data = json.load(f)
+    with open(inp_path, 'r') as f:
+        inp_data = json.load(f)
 
-def compare_against_reference(ref_json, target_json, out_diff_file, out_stats_file):
-    """
-    Compare one 'target_json' file against the reference 'ref_json'.
-    
-    Output:
-      - A JSON file (out_diff_file) with per-query differences
-      - A JSON file (out_stats_file) with overall stats (incl quartiles)
-    """
-    # Load them
-    with open(ref_json, 'r') as f_ref:
-        ref_data = json.load(f_ref)
-    with open(target_json, 'r') as f_target:
-        target_data = json.load(f_target)
+    # Build a quick lookup from the second file by "query"
+    inp_lookup = {}
+    for item in inp_data:
+        inp_lookup[item["query"]] = item
 
-    # Turn each into a dict keyed by "query"
-    ref_dict = {d["query"]: d for d in ref_data}
-    target_dict = {d["query"]: d for d in target_data}
+    details = []
+    rotation_diffs = []
+    translation_diffs = []
 
-    # We'll accumulate results plus differences for stats
-    results = []
+    for ref_item in ref_data:
+        qid = ref_item["query"]
+        if qid not in inp_lookup:
+            # If the query doesn't exist in the second file, skip or note missing
+            continue
 
-    # Accumulators for rotation diffs and translations
-    rotation_diffs_all = []  # we'll store all (roll, pitch, yaw) diffs
-    translation_diffs_all = []
+        ref_rot = ref_item["rotation"]
+        ref_trn = ref_item["translation"]
+        inp_rot = inp_lookup[qid]["rotation"]
+        inp_trn = inp_lookup[qid]["translation"]
 
-    # For queries that appear in both
-    matched_queries = set(ref_dict.keys()).intersection(set(target_dict.keys()))
+        # compute diffs
+        rot_diff_degs = quaternion_to_angle_degrees(ref_rot, inp_rot)
+        trans_diff = translation_distance(ref_trn, inp_trn)
 
-    for q_id in sorted(matched_queries):
-        ref_item = ref_dict[q_id]
-        tgt_item = target_dict[q_id]
+        rotation_diffs.append(rot_diff_degs)
+        translation_diffs.append(trans_diff)
 
-        # We assume rotation is [w, x, y, z]. Adjust as needed if your data is in a different order
-        rot_ref = ref_item["rotation"]
-        rot_tgt = tgt_item["rotation"]
-
-        # We assume translation is [x, y, z]
-        tr_ref = ref_item["translation"]
-        tr_tgt = tgt_item["translation"]
-
-        # Compute rotation diffs
-        rot_diff = quaternion_diff_angles(rot_ref, rot_tgt)
-        # We'll store the roll/pitch/yaw diffs for stats
-        rotation_diffs_all.extend([rot_diff["roll_diff_deg"],
-                                   rot_diff["pitch_diff_deg"],
-                                   rot_diff["yaw_diff_deg"]])
-
-        # Compute translation diff
-        t_diff = translation_distance(tr_ref, tr_tgt)
-        translation_diffs_all.append(t_diff)
-
-        # Store per-query result
-        results.append({
-            "query": q_id,
-            "rotation_diff": rot_diff,
-            "translation_diff": t_diff,
-            "inference_time_ref": ref_item["inference_time"],
-            "inference_time_target": tgt_item["inference_time"]
+        details.append({
+            "query": qid,
+            "rotation_diff_degs": rot_diff_degs,
+            "translation_diff": trans_diff
         })
 
-    # Write the per-query differences
-    with open(out_diff_file, "w") as fd:
-        json.dump(results, fd, indent=2)
+    # stats
+    stat_dict = {}
 
-    # Compute stats for rotation and translation
-    rotation_stats = compute_statistics(rotation_diffs_all)
-    translation_stats = compute_statistics(translation_diffs_all)
+    def quartiles(values):
+        if not values:
+            return (None, None, None)
+        sorted_vals = sorted(values)
+        # Q1, median, Q3
+        q1 = statistics.quantiles(sorted_vals, n=4, method='inclusive')[0]
+        q2 = statistics.median(sorted_vals)
+        q3 = statistics.quantiles(sorted_vals, n=4, method='inclusive')[2]
+        return (q1, q2, q3)
 
-    stats_report = {
-        "num_matched_queries": len(matched_queries),
-        "rotation_diff_degs": rotation_stats,
-        "translation_diff": translation_stats
-    }
+    def percentile_10_90(values):
+        """
+        Return the 10th and 90th percentiles of the given list of values.
+        """
+        if not values:
+            return (None, None)
+        sorted_vals = sorted(values)
+        # Using statistics.quantiles with n=10 will return 9 cut points:
+        #   indices 0..8 correspond to 10%, 20%, ..., 90%.
+        p10 = statistics.quantiles(sorted_vals, n=10, method='inclusive')[0]  # 10%
+        p90 = statistics.quantiles(sorted_vals, n=10, method='inclusive')[8]  # 90%
+        return (p10, p90)
 
-    with open(out_stats_file, "w") as fs:
-        json.dump(stats_report, fs, indent=2)
+    # rotation stats
+    if rotation_diffs:
+        stat_dict["rotation_min"] = min(rotation_diffs)
+        stat_dict["rotation_max"] = max(rotation_diffs)
+        stat_dict["rotation_mean"] = statistics.mean(rotation_diffs)
 
-    print(f"Comparison completed. "
-          f"Matched queries: {len(matched_queries)}. "
-          f"See '{out_diff_file}' and '{out_stats_file}'.")
+        (rq1, rq2, rq3) = quartiles(rotation_diffs)
+        stat_dict["rotation_q1"] = rq1
+        stat_dict["rotation_median"] = rq2
+        stat_dict["rotation_q3"] = rq3
+
+        (r10, r90) = percentile_10_90(rotation_diffs)
+        stat_dict["rotation_10_percentile"] = r10
+        stat_dict["rotation_90_percentile"] = r90
+    else:
+        stat_dict["rotation_min"] = None
+        stat_dict["rotation_max"] = None
+        stat_dict["rotation_mean"] = None
+        stat_dict["rotation_q1"] = None
+        stat_dict["rotation_median"] = None
+        stat_dict["rotation_q3"] = None
+        stat_dict["rotation_10_percentile"] = None
+        stat_dict["rotation_90_percentile"] = None
+
+    # translation stats
+    if translation_diffs:
+        stat_dict["translation_min"] = min(translation_diffs)
+        stat_dict["translation_max"] = max(translation_diffs)
+        stat_dict["translation_mean"] = statistics.mean(translation_diffs)
+
+        (tq1, tq2, tq3) = quartiles(translation_diffs)
+        stat_dict["translation_q1"] = tq1
+        stat_dict["translation_median"] = tq2
+        stat_dict["translation_q3"] = tq3
+
+        (t10, t90) = percentile_10_90(translation_diffs)
+        stat_dict["translation_10_percentile"] = t10
+        stat_dict["translation_90_percentile"] = t90
+    else:
+        stat_dict["translation_min"] = None
+        stat_dict["translation_max"] = None
+        stat_dict["translation_mean"] = None
+        stat_dict["translation_q1"] = None
+        stat_dict["translation_median"] = None
+        stat_dict["translation_q3"] = None
+        stat_dict["translation_10_percentile"] = None
+        stat_dict["translation_90_percentile"] = None
+
+    # write output
+    with open(details_out, 'w') as f:
+        json.dump(details, f, indent=2)
+
+    with open(stats_out, 'w') as f:
+        json.dump(stat_dict, f, indent=2)
 
 
 if __name__ == "__main__":
     # Example usage:
     gt_folder = "/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/hloc/queries_2024"
-    query_folder = "/media/siyanhu/Changkun/Siyan/Tramway/process/hloc_rgb3_independent_2025/queries_2024"
+    query_folder = "/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/hloc_2025/queries_2024"
     JSON_FILE_1 = gt_folder + os.sep + "query_results.json"
     JSON_FILE_2 = query_folder + os.sep + "query_results.json"
     OUT_DIFF_FILE = query_folder + os.sep +  "differences.json"
     OUT_STATS_FILE = query_folder + os.sep + "stats.json"
 
-    compare_against_reference(JSON_FILE_1, JSON_FILE_2, OUT_DIFF_FILE, OUT_STATS_FILE)
+    if os.path.exists(OUT_DIFF_FILE):
+        os.remove(OUT_DIFF_FILE)
+    if os.path.exists(OUT_STATS_FILE):
+        os.remove(OUT_STATS_FILE)
+
+    main(JSON_FILE_1, JSON_FILE_2, OUT_DIFF_FILE, OUT_STATS_FILE)

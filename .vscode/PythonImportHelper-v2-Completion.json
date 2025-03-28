@@ -1,36 +1,29 @@
 [
     {
-        "label": "ALIKED",
-        "importPath": "lightglue",
-        "description": "lightglue",
-        "isExtraImport": true,
-        "detail": "lightglue",
-        "documentation": {}
-    },
-    {
-        "label": "LightGlue",
-        "importPath": "lightglue",
-        "description": "lightglue",
-        "isExtraImport": true,
-        "detail": "lightglue",
-        "documentation": {}
-    },
-    {
-        "label": "subprocess",
+        "label": "os",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "detail": "subprocess",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
-        "label": "sys",
+        "label": "time",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -351,6 +344,47 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "pycolmap",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pycolmap",
+        "description": "pycolmap",
+        "detail": "pycolmap",
         "documentation": {}
     },
     {
@@ -387,44 +421,486 @@
         "documentation": {}
     },
     {
-        "label": "D2Net",
-        "importPath": "lib.model_test",
-        "description": "lib.model_test",
-        "isExtraImport": true,
-        "detail": "lib.model_test",
-        "documentation": {}
-    },
-    {
-        "label": "D2Net",
-        "importPath": "lib.model_test",
-        "description": "lib.model_test",
-        "isExtraImport": true,
-        "detail": "lib.model_test",
-        "documentation": {}
-    },
-    {
-        "label": "process_multiscale",
-        "importPath": "lib.pyramid",
-        "description": "lib.pyramid",
-        "isExtraImport": true,
-        "detail": "lib.pyramid",
-        "documentation": {}
-    },
-    {
-        "label": "process_multiscale",
-        "importPath": "lib.pyramid",
-        "description": "lib.pyramid",
-        "isExtraImport": true,
-        "detail": "lib.pyramid",
-        "documentation": {}
-    },
-    {
-        "label": "os",
+        "label": "tqdm",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "trange",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "extract_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "match_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "reconstruction",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "pairs_from_retrieval",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "extract_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "match_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "reconstruction",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "pairs_from_retrieval",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "extract_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "match_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "reconstruction",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "pairs_from_retrieval",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "extract_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "match_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "reconstruction",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "pairs_from_retrieval",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "extract_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "match_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "reconstruction",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "pairs_from_retrieval",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "extract_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "match_features",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "reconstruction",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "pairs_from_retrieval",
+        "importPath": "hloc",
+        "description": "hloc",
+        "isExtraImport": true,
+        "detail": "hloc",
+        "documentation": {}
+    },
+    {
+        "label": "QueryLocalizer",
+        "importPath": "hloc.localize_sfm",
+        "description": "hloc.localize_sfm",
+        "isExtraImport": true,
+        "detail": "hloc.localize_sfm",
+        "documentation": {}
+    },
+    {
+        "label": "pose_from_cluster",
+        "importPath": "hloc.localize_sfm",
+        "description": "hloc.localize_sfm",
+        "isExtraImport": true,
+        "detail": "hloc.localize_sfm",
+        "documentation": {}
+    },
+    {
+        "label": "QueryLocalizer",
+        "importPath": "hloc.localize_sfm",
+        "description": "hloc.localize_sfm",
+        "isExtraImport": true,
+        "detail": "hloc.localize_sfm",
+        "documentation": {}
+    },
+    {
+        "label": "pose_from_cluster",
+        "importPath": "hloc.localize_sfm",
+        "description": "hloc.localize_sfm",
+        "isExtraImport": true,
+        "detail": "hloc.localize_sfm",
+        "documentation": {}
+    },
+    {
+        "label": "QueryLocalizer",
+        "importPath": "hloc.localize_sfm",
+        "description": "hloc.localize_sfm",
+        "isExtraImport": true,
+        "detail": "hloc.localize_sfm",
+        "documentation": {}
+    },
+    {
+        "label": "pose_from_cluster",
+        "importPath": "hloc.localize_sfm",
+        "description": "hloc.localize_sfm",
+        "isExtraImport": true,
+        "detail": "hloc.localize_sfm",
+        "documentation": {}
+    },
+    {
+        "label": "QueryLocalizer",
+        "importPath": "hloc.localize_sfm",
+        "description": "hloc.localize_sfm",
+        "isExtraImport": true,
+        "detail": "hloc.localize_sfm",
+        "documentation": {}
+    },
+    {
+        "label": "pose_from_cluster",
+        "importPath": "hloc.localize_sfm",
+        "description": "hloc.localize_sfm",
+        "isExtraImport": true,
+        "detail": "hloc.localize_sfm",
+        "documentation": {}
+    },
+    {
+        "label": "ALIKED",
+        "importPath": "lightglue",
+        "description": "lightglue",
+        "isExtraImport": true,
+        "detail": "lightglue",
+        "documentation": {}
+    },
+    {
+        "label": "LightGlue",
+        "importPath": "lightglue",
+        "description": "lightglue",
+        "isExtraImport": true,
+        "detail": "lightglue",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "D2Net",
+        "importPath": "lib.model_test",
+        "description": "lib.model_test",
+        "isExtraImport": true,
+        "detail": "lib.model_test",
+        "documentation": {}
+    },
+    {
+        "label": "D2Net",
+        "importPath": "lib.model_test",
+        "description": "lib.model_test",
+        "isExtraImport": true,
+        "detail": "lib.model_test",
+        "documentation": {}
+    },
+    {
+        "label": "process_multiscale",
+        "importPath": "lib.pyramid",
+        "description": "lib.pyramid",
+        "isExtraImport": true,
+        "detail": "lib.pyramid",
+        "documentation": {}
+    },
+    {
+        "label": "process_multiscale",
+        "importPath": "lib.pyramid",
+        "description": "lib.pyramid",
+        "isExtraImport": true,
+        "detail": "lib.pyramid",
         "documentation": {}
     },
     {
@@ -517,15 +993,6 @@
         "importPath": "numpy",
         "description": "numpy",
         "detail": "numpy",
-        "documentation": {}
-    },
-    {
-        "label": "pycolmap",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pycolmap",
-        "description": "pycolmap",
-        "detail": "pycolmap",
         "documentation": {}
     },
     {
@@ -752,135 +1219,6 @@
         "importPath": "PIL.Image",
         "description": "PIL.Image",
         "detail": "PIL.Image",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "trange",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
-        "label": "tqdm",
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "isExtraImport": true,
-        "detail": "tqdm",
         "documentation": {}
     },
     {
@@ -1664,101 +2002,37 @@
         "documentation": {}
     },
     {
-        "label": "time",
+        "label": "math",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
         "documentation": {}
     },
     {
-        "label": "json",
+        "label": "ceil",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "ceil",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "statistics",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "extract_features",
-        "importPath": "hloc",
-        "description": "hloc",
-        "isExtraImport": true,
-        "detail": "hloc",
-        "documentation": {}
-    },
-    {
-        "label": "match_features",
-        "importPath": "hloc",
-        "description": "hloc",
-        "isExtraImport": true,
-        "detail": "hloc",
-        "documentation": {}
-    },
-    {
-        "label": "reconstruction",
-        "importPath": "hloc",
-        "description": "hloc",
-        "isExtraImport": true,
-        "detail": "hloc",
-        "documentation": {}
-    },
-    {
-        "label": "pairs_from_retrieval",
-        "importPath": "hloc",
-        "description": "hloc",
-        "isExtraImport": true,
-        "detail": "hloc",
-        "documentation": {}
-    },
-    {
-        "label": "extract_features",
-        "importPath": "hloc",
-        "description": "hloc",
-        "isExtraImport": true,
-        "detail": "hloc",
-        "documentation": {}
-    },
-    {
-        "label": "match_features",
-        "importPath": "hloc",
-        "description": "hloc",
-        "isExtraImport": true,
-        "detail": "hloc",
-        "documentation": {}
-    },
-    {
-        "label": "reconstruction",
-        "importPath": "hloc",
-        "description": "hloc",
-        "isExtraImport": true,
-        "detail": "hloc",
-        "documentation": {}
-    },
-    {
-        "label": "pairs_from_retrieval",
-        "importPath": "hloc",
-        "description": "hloc",
-        "isExtraImport": true,
-        "detail": "hloc",
-        "documentation": {}
-    },
-    {
-        "label": "QueryLocalizer",
-        "importPath": "hloc.localize_sfm",
-        "description": "hloc.localize_sfm",
-        "isExtraImport": true,
-        "detail": "hloc.localize_sfm",
-        "documentation": {}
-    },
-    {
-        "label": "pose_from_cluster",
-        "importPath": "hloc.localize_sfm",
-        "description": "hloc.localize_sfm",
-        "isExtraImport": true,
-        "detail": "hloc.localize_sfm",
+        "importPath": "statistics",
+        "description": "statistics",
+        "detail": "statistics",
         "documentation": {}
     },
     {
@@ -2272,31 +2546,6 @@
         "importPath": "os.path",
         "description": "os.path",
         "detail": "os.path",
-        "documentation": {}
-    },
-    {
-        "label": "math",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "math",
-        "description": "math",
-        "detail": "math",
-        "documentation": {}
-    },
-    {
-        "label": "ceil",
-        "importPath": "math",
-        "description": "math",
-        "isExtraImport": true,
-        "detail": "math",
-        "documentation": {}
-    },
-    {
-        "label": "ceil",
-        "importPath": "math",
-        "description": "math",
-        "isExtraImport": true,
-        "detail": "math",
         "documentation": {}
     },
     {
@@ -2906,6 +3155,303 @@
         "description": "setuptools",
         "isExtraImport": true,
         "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "filter_query_images",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "def filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)\n    return filtered\ndef parse_retrieval(path):",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "parse_retrieval",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "def parse_retrieval(path):\n    \"\"\"\n    Reads the pairs from the NetVLAD retrieval output file (pairs-loc.txt).\n    Returns a list of reference image names that are retrieved for each query.\n    \"\"\"\n    retrieval = []\n    with open(path, \"r\") as f:\n        for line in f.read().splitlines():\n            if not line.strip():\n                continue",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "query_position",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "def query_position(\n        sfm_model, model_index,\n        query_list, query_dir, outputs_query,\n        references_registered, ref_dir, outputs_ref,\n        feature_conf, retrieval_conf, matcher_conf,\n        number_of_matches = 20\n):\n    \"\"\"\n    Localizes a list of queries against a given model by:\n      - extracting features,",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "def main():\n    \"\"\"\n    Main entry point for reference reconstruction and query localization.\n    \"\"\"\n    # Adjust paths according to your setup\n    ref_dir = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb5/frames\")\n    queries_dir  = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb5/frames/2024\")\n    skip_query_seq_from_ref = [\"2024\"]\n    outputs_ref = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb5/hloc\")\n    outputs_query = outputs_ref / \"queries_2024\"",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "device = \"cuda\" if torch.cuda.is_available() else \"cpu\"\n# Global configuration for extraction and matching\nretrieval_conf = extract_features.confs[\"netvlad\"]\nretrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "retrieval_conf",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "retrieval_conf = extract_features.confs[\"netvlad\"]\nretrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "retrieval_conf[\"device\"]",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "retrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "feature_conf",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "feature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "feature_conf[\"device\"]",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "feature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "matcher_conf",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "matcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "matcher_conf[\"device\"]",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon2",
+        "description": "backup_stats.2025_03_26.query_recon2",
+        "peekOfCode": "matcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)\n    return filtered",
+        "detail": "backup_stats.2025_03_26.query_recon2",
+        "documentation": {}
+    },
+    {
+        "label": "filter_query_images",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "def filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)\n    return filtered\ndef parse_retrieval(path):",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "parse_retrieval",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "def parse_retrieval(path):\n    \"\"\"\n    Reads the pairs from the NetVLAD retrieval output file (pairs-loc.txt).\n    Returns a list of reference image names that are retrieved for each query.\n    \"\"\"\n    retrieval = []\n    with open(path, \"r\") as f:\n        for line in f.read().splitlines():\n            if not line.strip():\n                continue",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "query_position",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "def query_position(\n        sfm_model, model_index,\n        query_list, query_dir, outputs_query,\n        references_registered, ref_dir, outputs_ref,\n        feature_conf, retrieval_conf, matcher_conf,\n        number_of_matches = 20\n):\n    \"\"\"\n    Localizes a list of queries against a given model by:\n      - extracting features,",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "def main():\n    \"\"\"\n    Main entry point for reference reconstruction and query localization.\n    \"\"\"\n    # Adjust paths according to your setup\n    ref_dir = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb5/frames/2025\")\n    queries_dir  = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb5/frames/2024\")\n    skip_query_seq_from_ref = [\"2024\"]\n    outputs_ref = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/hloc_rgb5_independent_2025\")\n    outputs_query = outputs_ref / \"queries_2024\"",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "device = \"cuda\" if torch.cuda.is_available() else \"cpu\"\n# Global configuration for extraction and matching\nretrieval_conf = extract_features.confs[\"netvlad\"]\nretrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "retrieval_conf",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "retrieval_conf = extract_features.confs[\"netvlad\"]\nretrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "retrieval_conf[\"device\"]",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "retrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "feature_conf",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "feature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "feature_conf[\"device\"]",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "feature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "matcher_conf",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "matcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "matcher_conf[\"device\"]",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon3",
+        "description": "backup_stats.2025_03_26.query_recon3",
+        "peekOfCode": "matcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)\n    return filtered",
+        "detail": "backup_stats.2025_03_26.query_recon3",
+        "documentation": {}
+    },
+    {
+        "label": "filter_query_images",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "def filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)\n    return filtered\ndef parse_retrieval(path):",
+        "detail": "backup_stats.2025_03_26.query_recon4",
+        "documentation": {}
+    },
+    {
+        "label": "parse_retrieval",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "def parse_retrieval(path):\n    \"\"\"\n    Reads the pairs from the NetVLAD retrieval output file (pairs-loc.txt).\n    Returns a list of reference image names that are retrieved for each query.\n    \"\"\"\n    retrieval = []\n    with open(path, \"r\") as f:\n        for line in f.read().splitlines():\n            if not line.strip():\n                continue",
+        "detail": "backup_stats.2025_03_26.query_recon4",
+        "documentation": {}
+    },
+    {
+        "label": "query_position",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "def query_position(\n        sfm_model, model_index,\n        query_list, query_dir, outputs_query,\n        references_registered, ref_dir, outputs_ref,\n        feature_conf, retrieval_conf, matcher_conf,\n        number_of_matches = 20\n):\n    \"\"\"\n    Localizes a list of queries against a given model by:\n      - extracting features,",
+        "detail": "backup_stats.2025_03_26.query_recon4",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "def main():\n    \"\"\"\n    Main entry point for reference reconstruction and query localization.\n    \"\"\"\n    # Adjust paths according to your setup\n    ref_dir = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/frames/2025\")\n    queries_dir  = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/frames/2024\")\n    skip_query_seq_from_ref = [\"2024\"]\n    outputs_ref = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/hloc_rgb3_independent_2025\")\n    outputs_query = outputs_ref / \"queries_2024\"",
+        "detail": "backup_stats.2025_03_26.query_recon4",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "device = \"cuda\" if torch.cuda.is_available() else \"cpu\"\n# Global configuration for extraction and matching\nretrieval_conf = extract_features.confs[\"netvlad\"]\nretrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:",
+        "detail": "backup_stats.2025_03_26.query_recon4",
+        "documentation": {}
+    },
+    {
+        "label": "retrieval_conf",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "retrieval_conf = extract_features.confs[\"netvlad\"]\nretrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []",
+        "detail": "backup_stats.2025_03_26.query_recon4",
+        "documentation": {}
+    },
+    {
+        "label": "retrieval_conf[\"device\"]",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "retrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:",
+        "detail": "backup_stats.2025_03_26.query_recon4",
+        "documentation": {}
+    },
+    {
+        "label": "feature_conf",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "feature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]",
+        "detail": "backup_stats.2025_03_26.query_recon4",
+        "documentation": {}
+    },
+    {
+        "label": "feature_conf[\"device\"]",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "feature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:",
+        "detail": "backup_stats.2025_03_26.query_recon4",
+        "documentation": {}
+    },
+    {
+        "label": "matcher_conf",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "matcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)",
+        "detail": "backup_stats.2025_03_26.query_recon4",
+        "documentation": {}
+    },
+    {
+        "label": "matcher_conf[\"device\"]",
+        "kind": 5,
+        "importPath": "backup_stats.2025_03_26.query_recon4",
+        "description": "backup_stats.2025_03_26.query_recon4",
+        "peekOfCode": "matcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)\n    return filtered",
+        "detail": "backup_stats.2025_03_26.query_recon4",
         "documentation": {}
     },
     {
@@ -4524,7 +5070,7 @@
         "kind": 2,
         "importPath": "hloc.extract_features",
         "description": "hloc.extract_features",
-        "peekOfCode": "def main(\n    conf: Dict,\n    image_dir: Path,\n    export_dir: Optional[Path] = None,\n    as_half: bool = True,\n    image_list: Optional[Union[Path, List[str]]] = None,\n    feature_path: Optional[Path] = None,\n    overwrite: bool = False,\n) -> Path:\n    logger.info(",
+        "peekOfCode": "def main(\n    conf: Dict,\n    image_dir: Path,\n    export_dir: Optional[Path] = None,\n    as_half: bool = True,\n    image_list: Optional[Union[Path, List[str]]] = None,\n    feature_path: Optional[Path] = None,\n    overwrite: bool = False,\n    query_mode=False\n) -> Path:",
         "detail": "hloc.extract_features",
         "documentation": {}
     },
@@ -4578,7 +5124,7 @@
         "kind": 6,
         "importPath": "hloc.localize_sfm",
         "description": "hloc.localize_sfm",
-        "peekOfCode": "class QueryLocalizer:\n    def __init__(self, reconstruction, config=None):\n        self.reconstruction = reconstruction\n        self.config = config or {}\n    def localize(self, points2D_all, points2D_idxs, points3D_id, query_camera):\n        points2D = points2D_all[points2D_idxs]\n        points3D = [self.reconstruction.points3D[j].xyz for j in points3D_id]\n        ret = pycolmap.absolute_pose_estimation(\n            points2D,\n            points3D,",
+        "peekOfCode": "class QueryLocalizer:\n    def __init__(self, reconstruction, config=None):\n        self.reconstruction = reconstruction\n        self.config = config or {}\n    def localize(self, points2D_all, points2D_idxs, points3D_id, query_camera):\n        points2D = points2D_all[points2D_idxs]\n        points3D = [self.reconstruction.points3D[j].xyz for j in points3D_id]\n        ret = pycolmap.estimate_and_refine_absolute_pose(\n            points2D,\n            points3D,",
         "detail": "hloc.localize_sfm",
         "documentation": {}
     },
@@ -4889,6 +5435,15 @@
         "documentation": {}
     },
     {
+        "label": "query_main",
+        "kind": 2,
+        "importPath": "hloc.pairs_from_retrieval",
+        "description": "hloc.pairs_from_retrieval",
+        "peekOfCode": "def query_main(\n    descriptors,\n    output,\n    num_matched,\n    query_dir=None,\n    query_list=None,\n    db_dir=None,\n    db_list=None,\n    db_model=None,\n    db_descriptors=None,",
+        "detail": "hloc.pairs_from_retrieval",
+        "documentation": {}
+    },
+    {
         "label": "create_empty_db",
         "kind": 2,
         "importPath": "hloc.reconstruction",
@@ -4929,7 +5484,7 @@
         "kind": 2,
         "importPath": "hloc.reconstruction",
         "description": "hloc.reconstruction",
-        "peekOfCode": "def main_with_existed_database(\n    sfm_dir: Path,\n    image_dir: Path,\n    pairs: Path,\n    features: Path,\n    matches: Path,\n    camera_mode: pycolmap.CameraMode = pycolmap.CameraMode.AUTO,\n    verbose: bool = False,\n    skip_geometric_verification: bool = False,\n    min_match_score: Optional[float] = None,",
+        "peekOfCode": "def main_with_existed_database(\n    sfm_dir: Path,\n    image_dir: Path,\n    camera_mode: pycolmap.CameraMode = pycolmap.CameraMode.AUTO,\n    verbose: bool = False,\n    skip_geometric_verification: bool = False,\n    min_match_score: Optional[float] = None,\n    image_list: Optional[List[str]] = None,\n    image_options: Optional[Dict[str, Any]] = None,\n    mapper_options: Optional[Dict[str, Any]] = None,",
         "detail": "hloc.reconstruction",
         "documentation": {}
     },
@@ -5055,7 +5610,7 @@
         "kind": 2,
         "importPath": "nohup_scripts.query_recon",
         "description": "nohup_scripts.query_recon",
-        "peekOfCode": "def filter_query_images(ref_register_list):\n    \"\"\"\n    Filters out images from 'rgb7', 'rgb8', 'rgb9' for references to avoid query overlap.\n    \"\"\"\n    skip_list = ['rgb7', 'rgb8', 'rgb9']\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split('/')[0]\n        if prefix not in skip_list:\n            filtered.append(name)",
+        "peekOfCode": "def filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)\n    return filtered\ndef parse_retrieval(path):",
         "detail": "nohup_scripts.query_recon",
         "documentation": {}
     },
@@ -5073,7 +5628,7 @@
         "kind": 2,
         "importPath": "nohup_scripts.query_recon",
         "description": "nohup_scripts.query_recon",
-        "peekOfCode": "def query_position(\n    query_list, model, references_registered, model_index, \n    feature_conf, retrieval_conf, matcher_conf, images, outputs\n):\n    \"\"\"\n    Localizes a list of queries against a given model by:\n      - extracting features,\n      - global descriptors,\n      - retrieving reference pairs,\n      - matching local features,",
+        "peekOfCode": "def query_position(\n        sfm_model, model_index,\n        query_list, query_dir, outputs_query,\n        references_registered, ref_dir, outputs_ref,\n        feature_conf, retrieval_conf, matcher_conf,\n        number_of_matches = 20\n):\n    \"\"\"\n    Localizes a list of queries against a given model by:\n      - extracting features,",
         "detail": "nohup_scripts.query_recon",
         "documentation": {}
     },
@@ -5082,7 +5637,7 @@
         "kind": 2,
         "importPath": "nohup_scripts.query_recon",
         "description": "nohup_scripts.query_recon",
-        "peekOfCode": "def main():\n    \"\"\"\n    Main entry point for reference reconstruction and query localization.\n    \"\"\"\n    # Adjust paths according to your setup\n    images = Path(\"/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/mapping\")\n    queries_dir  = Path(\"/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/mapping\")\n    outputs_ref = Path(\"/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/hloc\")\n    outputs_query = Path(\"/home/siyanhu/Gits/Tramway/Hierarchical-Localization/datasets/sacre_coeur/query\")\n    outputs_query.mkdir(parents=True, exist_ok=True)",
+        "peekOfCode": "def main():\n    \"\"\"\n    Main entry point for reference reconstruction and query localization.\n    \"\"\"\n    # Adjust paths according to your setup\n    ref_dir = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/frames_2025\")\n    queries_dir  = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/frames/2024\")\n    skip_query_seq_from_ref = [\"2024\"]\n    outputs_ref = Path(\"/media/siyanhu/Changkun/Siyan/Tramway/process/lidar_rgb3/hloc_2025\")\n    outputs_query = outputs_ref / \"queries_2024\"",
         "detail": "nohup_scripts.query_recon",
         "documentation": {}
     },
@@ -5091,7 +5646,7 @@
         "kind": 5,
         "importPath": "nohup_scripts.query_recon",
         "description": "nohup_scripts.query_recon",
-        "peekOfCode": "device = \"cuda\" if torch.cuda.is_available() else \"cpu\"\n# Global configuration for extraction and matching\nretrieval_conf = extract_features.confs[\"netvlad\"]\nretrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list):\n    \"\"\"",
+        "peekOfCode": "device = \"cuda\" if torch.cuda.is_available() else \"cpu\"\n# Global configuration for extraction and matching\nretrieval_conf = extract_features.confs[\"netvlad\"]\nretrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:",
         "detail": "nohup_scripts.query_recon",
         "documentation": {}
     },
@@ -5100,7 +5655,7 @@
         "kind": 5,
         "importPath": "nohup_scripts.query_recon",
         "description": "nohup_scripts.query_recon",
-        "peekOfCode": "retrieval_conf = extract_features.confs[\"netvlad\"]\nretrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list):\n    \"\"\"\n    Filters out images from 'rgb7', 'rgb8', 'rgb9' for references to avoid query overlap.\n    \"\"\"",
+        "peekOfCode": "retrieval_conf = extract_features.confs[\"netvlad\"]\nretrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []",
         "detail": "nohup_scripts.query_recon",
         "documentation": {}
     },
@@ -5109,7 +5664,7 @@
         "kind": 5,
         "importPath": "nohup_scripts.query_recon",
         "description": "nohup_scripts.query_recon",
-        "peekOfCode": "retrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list):\n    \"\"\"\n    Filters out images from 'rgb7', 'rgb8', 'rgb9' for references to avoid query overlap.\n    \"\"\"\n    skip_list = ['rgb7', 'rgb8', 'rgb9']",
+        "peekOfCode": "retrieval_conf[\"device\"] = \"cuda\"  # Force GPU for NetVLAD\nfeature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:",
         "detail": "nohup_scripts.query_recon",
         "documentation": {}
     },
@@ -5118,7 +5673,7 @@
         "kind": 5,
         "importPath": "nohup_scripts.query_recon",
         "description": "nohup_scripts.query_recon",
-        "peekOfCode": "feature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list):\n    \"\"\"\n    Filters out images from 'rgb7', 'rgb8', 'rgb9' for references to avoid query overlap.\n    \"\"\"\n    skip_list = ['rgb7', 'rgb8', 'rgb9']\n    filtered = []",
+        "peekOfCode": "feature_conf = extract_features.confs[\"superpoint_aachen\"]\nfeature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]",
         "detail": "nohup_scripts.query_recon",
         "documentation": {}
     },
@@ -5127,7 +5682,7 @@
         "kind": 5,
         "importPath": "nohup_scripts.query_recon",
         "description": "nohup_scripts.query_recon",
-        "peekOfCode": "feature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list):\n    \"\"\"\n    Filters out images from 'rgb7', 'rgb8', 'rgb9' for references to avoid query overlap.\n    \"\"\"\n    skip_list = ['rgb7', 'rgb8', 'rgb9']\n    filtered = []\n    for name in ref_register_list:",
+        "peekOfCode": "feature_conf[\"device\"] = \"cuda\"    # Force GPU for SuperPoint\nmatcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:",
         "detail": "nohup_scripts.query_recon",
         "documentation": {}
     },
@@ -5136,7 +5691,7 @@
         "kind": 5,
         "importPath": "nohup_scripts.query_recon",
         "description": "nohup_scripts.query_recon",
-        "peekOfCode": "matcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list):\n    \"\"\"\n    Filters out images from 'rgb7', 'rgb8', 'rgb9' for references to avoid query overlap.\n    \"\"\"\n    skip_list = ['rgb7', 'rgb8', 'rgb9']\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split('/')[0]",
+        "peekOfCode": "matcher_conf = match_features.confs[\"superpoint+lightglue\"]\nmatcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)",
         "detail": "nohup_scripts.query_recon",
         "documentation": {}
     },
@@ -5145,7 +5700,7 @@
         "kind": 5,
         "importPath": "nohup_scripts.query_recon",
         "description": "nohup_scripts.query_recon",
-        "peekOfCode": "matcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list):\n    \"\"\"\n    Filters out images from 'rgb7', 'rgb8', 'rgb9' for references to avoid query overlap.\n    \"\"\"\n    skip_list = ['rgb7', 'rgb8', 'rgb9']\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split('/')[0]\n        if prefix not in skip_list:",
+        "peekOfCode": "matcher_conf[\"device\"] = \"cuda\"    # Force GPU for LightGlue\ndef filter_query_images(ref_register_list, skip_seq_list=None):\n    if skip_seq_list is None:\n        return ref_register_list\n    filtered = []\n    for name in ref_register_list:\n        prefix = name.split(os.sep)[0]\n        if prefix not in skip_seq_list:\n            filtered.append(name)\n    return filtered",
         "detail": "nohup_scripts.query_recon",
         "documentation": {}
     },
@@ -5156,6 +5711,42 @@
         "description": "nohup_scripts.run_recon",
         "peekOfCode": "def main():\n    # Set up device: CPU or GPU\n    device = 'cuda' if torch.cuda.is_available() else 'cpu'\n    print(f\"Using device: {device}\")\n    # --------------------------------------------------------------\n    # Step 1: Define paths and copy images (adjust to your needs)\n    # --------------------------------------------------------------\n    # Example commands from the original notebook (not automatically run here):\n    #\n    # os.system(\"cp -r /media/.../images /media/.../lidarcam/rgb7\")",
         "detail": "nohup_scripts.run_recon",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "nohup_scripts.run_sfm",
+        "description": "nohup_scripts.run_sfm",
+        "peekOfCode": "def main():\n    # Set up device: CPU or GPU\n    device = 'cuda' if torch.cuda.is_available() else 'cpu'\n    print(f\"Using device: {device}\")\n    # --------------------------------------------------------------\n    # Step 1: Define paths and copy images (adjust to your needs)\n    # --------------------------------------------------------------\n    # Example commands from the original notebook (not automatically run here):\n    #\n    # os.system(\"cp -r /media/.../images /media/.../lidarcam/rgb7\")",
+        "detail": "nohup_scripts.run_sfm",
+        "documentation": {}
+    },
+    {
+        "label": "quaternion_to_angle_degrees",
+        "kind": 2,
+        "importPath": "nohup_scripts.stats",
+        "description": "nohup_scripts.stats",
+        "peekOfCode": "def quaternion_to_angle_degrees(q_ref, q_test):\n    \"\"\"\n    Compute the *magnitude* of angular difference (in degrees) between two quaternions\n    q_ref and q_test. Both q_ref and q_test are [x, y, z, w] floats.\n    Steps:\n      1) Normalize each quaternion (q_ref, q_test).\n      2) dot = dot(q_ref, q_test) (clamped to [-1,1]) => dot = cos(angle/2).\n      3) angle = 2 * arccos(dot).    (radians)\n      4) angle_deg = angle in degrees.  -> [0..360]\n      5) If angle_deg > 180, interpret angle as (360 - angle_deg), so the final",
+        "detail": "nohup_scripts.stats",
+        "documentation": {}
+    },
+    {
+        "label": "translation_distance",
+        "kind": 2,
+        "importPath": "nohup_scripts.stats",
+        "description": "nohup_scripts.stats",
+        "peekOfCode": "def translation_distance(t_ref, t_test):\n    \"\"\"\n    Euclidean distance between two translations [x, y, z].\n    \"\"\"\n    dx = t_test[0] - t_ref[0]\n    dy = t_test[1] - t_ref[1]\n    dz = t_test[2] - t_ref[2]\n    return math.sqrt(dx * dx + dy * dy + dz * dz)\n# -----------\n# MAIN",
+        "detail": "nohup_scripts.stats",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "nohup_scripts.stats",
+        "description": "nohup_scripts.stats",
+        "peekOfCode": "def main(ref_path, inp_path, details_out, stats_out):\n    with open(ref_path, 'r') as f:\n        ref_data = json.load(f)\n    with open(inp_path, 'r') as f:\n        inp_data = json.load(f)\n    # Build a quick lookup from the second file by \"query\"\n    inp_lookup = {}\n    for item in inp_data:\n        inp_lookup[item[\"query\"]] = item\n    details = []",
+        "detail": "nohup_scripts.stats",
         "documentation": {}
     },
     {
