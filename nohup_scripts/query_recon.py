@@ -191,24 +191,32 @@ def main():
     ref_paths = []
     if any(ref_dir.iterdir()):
         subdirs = [p for p in ref_dir.iterdir() if p.is_dir()]
+        valid_suffixes = {'.jpg', '.jpeg', '.png'}
+        
         if subdirs:  # If subdirectories exist
             for subdir in subdirs:
-                for img_path in subdir.glob('*.jpg'):  # Search for .jpg files in subdirectories
-                    ref_paths.append(str(img_path.relative_to(ref_dir)))
+                for img_path in subdir.iterdir():
+                    if img_path.is_file() and img_path.suffix.lower() in valid_suffixes:
+                        ref_paths.append(str(img_path.relative_to(ref_dir)))
         else:  # If no subdirectories, look directly in the images folder
-            for img_path in ref_dir.glob('*.jpg'):  # Search for .jpg files in images folder
-                ref_paths.append(str(img_path.relative_to(ref_dir)))
+            for img_path in ref_dir.iterdir():
+                if img_path.is_file() and img_path.suffix.lower() in valid_suffixes:
+                    ref_paths.append(str(img_path.relative_to(ref_dir)))
 
     query_paths = []
     if any(queries_dir.iterdir()):
         subdirs = [p for p in queries_dir.iterdir() if p.is_dir()]
+        valid_suffixes = {'.jpg', '.jpeg', '.png'}
+        
         if subdirs:  # If subdirectories exist
             for subdir in subdirs:
-                for img_path in subdir.glob('*.jpg'):  # Search for .jpg files in subdirectories
-                    query_paths.append(str(img_path.relative_to(queries_dir)))
+                for img_path in subdir.iterdir():
+                    if img_path.is_file() and img_path.suffix.lower() in valid_suffixes:
+                        ref_paths.append(str(img_path.relative_to(queries_dir)))
         else:  # If no subdirectories, look directly in the images folder
-            for img_path in queries_dir.glob('*.jpg'):  # Search for .jpg files in images folder
-                query_paths.append(str(img_path.relative_to(queries_dir)))
+            for img_path in queries_dir.iterdir():
+                if img_path.is_file() and img_path.suffix.lower() in valid_suffixes:
+                    ref_paths.append(str(img_path.relative_to(queries_dir)))
 
     print(ref_paths[5:10], ref_paths[-10:-5])
     print(query_paths[5:10], query_paths[-10:-5])

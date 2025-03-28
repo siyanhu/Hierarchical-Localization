@@ -59,8 +59,8 @@ def main():
     # --------------------------------------------------------------
     # Step 3: Path setup for images, output, and intermediate files
     # --------------------------------------------------------------
-    images_dir  = Path("/media/siyanhu/Changkun/Siyan/Tramway/data_2025_01_24-lidarrgb/rgb3")
-    outputs_dir = Path("/media/siyanhu/Changkun/Siyan/Tramway/data_2025_01_24-lidarrgb/hloc_rgb3")
+    images_dir  = Path("/media/siyanhu/T7/HKUST/FullRecon/frames")
+    outputs_dir = Path("/media/siyanhu/T7/HKUST/FullRecon/hloc")
     outputs_dir.mkdir(parents=True, exist_ok=True)
 
     sfm_pairs_path = outputs_dir / "pairs-netvlad.txt"
@@ -78,13 +78,17 @@ def main():
     ref_paths = []
     if any(images_dir.iterdir()):
         subdirs = [p for p in images_dir.iterdir() if p.is_dir()]
+        valid_suffixes = {'.jpg', '.jpeg', '.png'}
+        
         if subdirs:  # If subdirectories exist
             for subdir in subdirs:
-                for img_path in subdir.glob('*.jpg'):  # Search for .jpg files in subdirectories
-                    ref_paths.append(str(img_path.relative_to(images_dir)))
+                for img_path in subdir.iterdir():
+                    if img_path.is_file() and img_path.suffix.lower() in valid_suffixes:
+                        ref_paths.append(str(img_path.relative_to(images_dir)))
         else:  # If no subdirectories, look directly in the images folder
-            for img_path in images_dir.glob('*.jpg'):  # Search for .jpg files in images folder
-                ref_paths.append(str(img_path.relative_to(images_dir)))
+            for img_path in images_dir.iterdir():
+                if img_path.is_file() and img_path.suffix.lower() in valid_suffixes:
+                    ref_paths.append(str(img_path.relative_to(images_dir)))
 
     # Show an example slice
     print("Example subset of reference paths:", ref_paths[:10])

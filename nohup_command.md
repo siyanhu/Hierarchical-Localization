@@ -1,6 +1,6 @@
 nohup bash nohup_recon_atrium.sh > nohup_recon_atrium.log 2>&1 &
 nohup bash nohup_recon_concourse.sh > nohup_recon_concourse.log 2>&1 &
-nohup bash nohup_recon.sh > nohup_recon.log 2>&1 &
+nohup python nohup_scripts/run_recon.py > nohup_recon_full_hkust.log 2>&1 &
 
 
 ps aux | grep nohup
